@@ -1,0 +1,201 @@
+{
+  "materi": [
+    {
+      "id": "anjen",
+      "judul": "Analisis Jenis (Anjen)",
+      "icon": "🧪",
+      "deskripsi": "Pemisahan dan identifikasi kation dalam golongan I–V menggunakan pereaksi selektif dan spesifik.",
+      "tujuan": "Memisahkan kation berdasarkan golongannya menggunakan pereaksi selektif dan mengidentifikasi kation yang telah terpisah menggunakan pereaksi yang spesifik.",
+      "prinsip": "Memisahkan kation dengan pereaksi selektif untuk memisahkan dari satu golongan dengan golongan lainnya. Kation yang telah terpisah ke dalam golongannya kemudian diidentifikasi menggunakan pereaksi spesifik untuk mengetahui jenis kation yang terdapat dalam masing-masing golongan.",
+      "punya_rumus": false,
+      "kation": [
+        {
+          "ion": "Ag⁺",
+          "golongan": "I",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Ag⁺(aq) + HCl(aq) → AgCl(s)↓ + H⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "H₂O dipanaskan", "persamaan": "AgCl(s) + H₂O(l) dipanaskan → tidak bereaksi", "pengamatan": "↓ putih, larutan keruh"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "AgCl(s) + 2NH₄OH(aq) → [Ag(NH₃)₂]⁺Cl⁻(aq) + 2H₂O(l)", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "HNO₃(aq)", "persamaan": "[Ag(NH₃)₂]⁺Cl⁻(aq) + 2HNO₃(aq) → AgCl(s)↓ + 2NH₄NO₃(aq)", "pengamatan": "↓ putih, larutan keruh"}
+          ]
+        },
+        {
+          "ion": "Pb²⁺",
+          "golongan": "I",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Pb²⁺(aq) + 2HCl(aq) → PbCl₂(s)↓ + 2H⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "H₂O dipanaskan", "persamaan": "PbCl₂(s) + H₂O(l) dipanaskan → Pb²⁺(aq) + 2Cl⁻(aq) + H₂O(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "K₂CrO₄(aq)", "persamaan": "Pb²⁺(aq) + K₂CrO₄(aq) → PbCrO₄(s)↓ + 2K⁺(aq)", "pengamatan": "↓ kuning, larutan kuning"}
+          ]
+        },
+        {
+          "ion": "Hg₂²⁺",
+          "golongan": "I",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Hg₂²⁺(aq) + HCl(aq) → Hg₂Cl₂(s)↓ + 2H⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "H₂O dipanaskan", "persamaan": "Hg₂Cl₂(s) + H₂O(l) dipanaskan → tidak bereaksi", "pengamatan": "↓ putih, larutan keruh"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Hg₂Cl₂(s) + NH₄OH(aq) → Hg(NH₂)Cl(s)↓putih + Hg(s)↓hitam + NH₄Cl(aq) + H₂O(l)", "pengamatan": "↓ hitam dan putih, larutan tidak berwarna"}
+          ]
+        },
+        {
+          "ion": "Al³⁺",
+          "golongan": "III",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Al³⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Al³⁺(aq) + 3NH₄OH(aq) → Al(OH)₃(s)↓ + 3NH₄⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "NaOH(aq)", "persamaan": "Al(OH)₃(s) + NaOH(aq) → Al(OH)₄⁻(aq) + Na⁺(aq)", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "HCl(aq) + Na₂CO₃(aq)", "persamaan": "Al(OH)₄⁻(aq) + 2HCl(aq) + Na₂CO₃(aq) → Al(OH)₃(s)↓ + 2NaCl(aq) + CO₂(g) + H₂O(l) + OH⁻(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"}
+          ]
+        },
+        {
+          "ion": "Fe³⁺",
+          "golongan": "III",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Fe³⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Kuning kecoklatan (orange)"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Fe³⁺(aq) + 3NH₄OH(aq) → Fe(OH)₃(s)↓ + 3NH₄⁺(aq)", "pengamatan": "↓ merah kecoklatan, larutan tidak berwarna"},
+            {"pereaksi": "NaOH(aq)", "persamaan": "Fe(OH)₃(s) + NaOH(aq) → Fe(OH)₃(s)↓", "pengamatan": "↓ merah kecoklatan, larutan tidak berwarna"},
+            {"pereaksi": "HNO₃(aq)", "persamaan": "Fe(OH)₃(s) + 3HNO₃(aq) → Fe³⁺(aq) + 3NO₃⁻(aq) + 3H₂O(l)", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "SCN⁻(aq)", "persamaan": "Fe³⁺(aq) + 3SCN⁻(aq) → Fe(SCN)₃(aq)", "pengamatan": "Larutan merah"}
+          ]
+        },
+        {
+          "ion": "Ba²⁺",
+          "golongan": "IV",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Ba²⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Ba²⁺(aq) + NH₄OH(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "K₂CrO₄(aq)", "persamaan": "Ba²⁺(aq) + K₂CrO₄(aq) → BaCrO₄(s)↓ + 2K⁺(aq)", "pengamatan": "↓ kuning"},
+            {"pereaksi": "CH₃COOH(aq)", "persamaan": "BaCrO₄(s) + CH₃COOH(aq) → tidak bereaksi", "pengamatan": "↓ kuning, larutan tidak berwarna"}
+          ]
+        },
+        {
+          "ion": "Sr²⁺",
+          "golongan": "IV",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Sr²⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Sr²⁺(aq) + NH₄OH(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "K₂CrO₄(aq)", "persamaan": "Sr²⁺(aq) + K₂CrO₄(aq) → SrCrO₄(s)↓ + 2K⁺(aq)", "pengamatan": "↓ kuning"},
+            {"pereaksi": "CH₃COOH(aq)", "persamaan": "SrCrO₄(s) + 2CH₃COOH(aq) → Sr²⁺(aq) + CrO₂⁻(aq) + 2CH₃COO⁻(aq) + H₂O(l)", "pengamatan": "Larutan kuning"},
+            {"pereaksi": "Na₂CO₃(aq)", "persamaan": "Sr²⁺(aq) + Na₂CO₃(aq) → SrCO₃(s)↓ + 2Na⁺(aq)", "pengamatan": "↓ putih, larutan kuning"}
+          ]
+        },
+        {
+          "ion": "Ca²⁺",
+          "golongan": "IV",
+          "reaksi": [
+            {"pereaksi": "HCl(aq)", "persamaan": "Ca²⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Ca²⁺(aq) + NH₄OH(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
+            {"pereaksi": "K₂CrO₄(aq)", "persamaan": "Ca²⁺(aq) + K₂CrO₄(aq) → tidak bereaksi", "pengamatan": "Larutan kuning"},
+            {"pereaksi": "H₂C₂O₄(aq) + NH₄OH(aq)", "persamaan": "Ca²⁺(aq) + H₂C₂O₄(aq) + 2NH₄OH(aq) → CaC₂O₄(s)↓ + NH₄⁺(aq) + 2H₂O(l)", "pengamatan": "↓ putih, larutan kuning"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "gravimetri",
+      "judul": "Gravimetri",
+      "icon": "⚖️",
+      "deskripsi": "Penetapan kadar zat secara kuantitatif berdasarkan pengukuran berat.",
+      "percobaan": [
+        {
+          "id": "gravi1",
+          "judul": "Percobaan 1 — Penetapan Kadar Air dalam Tepung Terigu",
+          "tujuan": "Menentukan jumlah air yang terkandung dalam sampel dengan mengukur selisih berat sebelum dan sesudah pengeringan di oven pada suhu 130°C, serta menghitung persentase air yang teruapkan dari tepung terigu dalam satuan persen (%).",
+          "prinsip": "Penetapan kadar air dalam tepung terigu dengan metode oven (gravimetri) yaitu menguapkan air dalam bahan dengan cara pengeringan serta penimbangan bahan sampai berat konstan. Bahan dipanaskan dalam oven pada suhu 130°C sampai diperoleh berat konstan. Kehilangan berat selama pengeringan merupakan jumlah air yang terdapat dalam bahan pangan yang dianalisis.",
+          "reaksi": null,
+          "rumus": "Kadar Air (%) = [(W₁ – W₀) – (W₂ – W₀)] / (W₁ – W₀) × 100%",
+          "keterangan_rumus": "W₀ = bobot wadah kosong (g) | W₁ = bobot wadah + sampel sebelum dipanaskan (g) | W₂ = bobot wadah + sampel setelah dipanaskan (g)"
+        },
+        {
+          "id": "gravi2",
+          "judul": "Percobaan 2 — Penetapan Kadar Abu dalam Tepung Terigu",
+          "tujuan": "Mengetahui kadar abu dalam sampel tepung terigu dengan metode gravimetri dan menghitung persentase abu dalam satuan persen (%).",
+          "prinsip": "Kadar abu dari sampel ditetapkan secara gravimetri dengan pemijaran pada suhu (550 ± 10)°C sehingga terbentuk oksida logam. Oksida logam yang terbentuk dibandingkan dengan berat sampel mula-mula dihitung sebagai kadar abu.",
+          "reaksi": "Sampel → (550 ± 10)°C → LxOy + CO₂↑ + H₂O",
+          "rumus": "Kadar Abu (%) = (W₂ – W₀) / (W₁ – W₀) × 100%",
+          "keterangan_rumus": "W₀ = cawan kosong (g) | W₁ = cawan + sampel sebelum pemanasan (g) | W₂ = cawan + sampel setelah pemanasan (g)"
+        },
+        {
+          "id": "gravi3",
+          "judul": "Percobaan 3 — Penetapan Kadar Sulfat (SO₄²⁻) dalam Garam Glauber",
+          "tujuan": "Penetapan sulfat dilakukan dengan pengendapan sebagai barium sulfat. Kadar sulfat dinyatakan dalam bentuk satuan persen (%).",
+          "prinsip": "Pada larutan sulfat yang diasamkan sedikit dengan asam klorida lalu ditambahkan larutan barium klorida yang encer sampai barium sulfat diendapkan dengan sempurna. Asam yang ditambahkan supaya hanya sulfat yang mengendap. Dalam lingkungan netral, fosfat, karbonat, atau kromat dari barium juga tidak dapat larut.",
+          "reaksi": "Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + 2NaCl(aq)",
+          "rumus": "Kadar SO₄²⁻ (%) = (Mr SO₄²⁻ / Mr BaSO₄) × (W₂ – W₀) / (W₁ – W₀) × 100%",
+          "keterangan_rumus": "Mr SO₄²⁻ = 96 g/mol | Mr BaSO₄ = 233 g/mol | W₀ = cawan kosong (g) | W₁ = cawan + sampel sebelum dipanaskan (g) | W₂ = cawan + abu setelah dipanaskan (g)"
+        },
+        {
+          "id": "gravi4",
+          "judul": "Percobaan 4 — Penetapan Kadar Fe dalam Garam Besi (II)",
+          "tujuan": "Menentukan kadar besi (Fe) dalam suatu sampel garam besi (II) secara kuantitatif dan menerapkan prinsip gravimetri dalam menghitung persentase (%) kadar besi berdasarkan berat tetap endapan Fe₂O₃ yang diperoleh.",
+          "prinsip": "Besi (II) dalam larutan dioksidasikan dengan HNO₃ pekat sehingga menjadi besi (III), kemudian diendapkan sebagai besi (III) hidroksida dengan penambahan ammonia. Endapan dicuci, dipijarkan lalu ditimbang sebagai besi (III) oksida.",
+          "reaksi": "3Fe²⁺(aq) + NO₃⁻(aq) + 4H⁺(aq) → 3Fe³⁺(aq) + NO(g) + 2H₂O(l)\nFe³⁺(aq) + 3NH₄OH(aq) → Fe(OH)₃(s)↓ + 3NH₄⁺(aq)\n2Fe(OH)₃(s) → (dipanaskan) → Fe₂O₃(s) + 3H₂O(g)",
+          "rumus": "Kadar Fe (%) = (2 × Ar Fe / Mr Fe₂O₃) × (W₂ – W₀) / (W₁ – W₀) × 100%",
+          "keterangan_rumus": "Ar Fe = 56 g/mol | Mr Fe₂O₃ = 160 g/mol | W₀ = cawan kosong (g) | W₁ = cawan + sampel sebelum dipanaskan (g) | W₂ = cawan + abu setelah dipanaskan (g)"
+        },
+        {
+          "id": "gravi5",
+          "judul": "Percobaan 5 — Penetapan Kadar Ba sebagai BaCrO₄ secara Homogeneous-Precipitation",
+          "tujuan": "Menentukan jumlah atau persentase kandungan barium (Ba) secara kuantitatif dalam suatu sampel menggunakan metode gravimetri homogeneous-precipitation.",
+          "prinsip": "Larutan kromat ditambahkan ke dalam larutan garam barium yang cukup asam untuk mencegah terbentuknya endapan, kemudian ditambahkan urea dan larutan dipanaskan sampai mendidih. Terbentuknya ammonium hidroksida hasil hidrolisis urea secara perlahan akan menaikkan pH larutan. Jika sudah mencapai harga pH tertentu, pengendapan barium kromat dimulai. Endapan yang terbentuk lebih kasar dan lebih murni dibandingkan dengan pengendapan secara langsung.",
+          "reaksi": "2CrO₄²⁻(aq) + 2H⁺(aq) ⇌ Cr₂O₇²⁻(aq) + H₂O(l)\n(NH₂)₂CO(aq) + H₂O(l) → 2NH₃(aq) + CO₂(g)\nCr₂O₇²⁻(aq) + 2OH⁻(aq) → 2CrO₄²⁻(aq) + H₂O(l)\nBa²⁺(aq) + CrO₄²⁻(aq) → BaCrO₄(s)↓",
+          "rumus": "Kadar Ba (%) = (Ar Ba / Mr BaCrO₄) × (W₁ – W₀) / V_sampel × 100%",
+          "keterangan_rumus": "Ar Ba = 137 g/mol | Mr BaCrO₄ = 253 g/mol | W₀ = kertas saring + wadah kosong (g) | W₁ = kertas saring + endapan + wadah setelah dipanaskan (g) | V_sampel = volume sampel (mL)"
+        }
+      ]
+    },
+    {
+      "id": "titrimetri",
+      "judul": "Titrimetri / Volumetri",
+      "icon": "🧫",
+      "deskripsi": "Penetapan kadar zat berdasarkan volume larutan standar yang bereaksi dengan analit.",
+      "percobaan": [
+        {
+          "id": "titri1",
+          "judul": "Standardisasi NaOH 0,1 N dengan Baku Primer Asam Oksalat",
+          "tujuan": null,
+          "prinsip": "Larutan NaOH merupakan larutan standar/baku sekunder yang dibakukan dengan larutan asam oksalat dengan indikator PP (fenolftalein).",
+          "reaksi": "2NaOH(aq) + H₂C₂O₄(aq) → Na₂C₂O₄(aq) + 2H₂O(l)",
+          "rumus": "N NaOH = mg asam oksalat / (Fp × V NaOH (mL) × BE oksalat)",
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE asam oksalat = BM/2 = 63 mg/mgrek | V NaOH = volume titran NaOH (mL)"
+        },
+        {
+          "id": "titri2",
+          "judul": "Standardisasi HCl 0,1 N dengan Baku Primer Boraks",
+          "tujuan": null,
+          "prinsip": "Larutan HCl merupakan larutan standar/baku sekunder yang dibakukan dengan larutan boraks dengan indikator SM (Sindur Metil/Merah Metil).",
+          "reaksi": "Na₂B₄O₇·10H₂O(s) + 2HCl(aq) → 2NaCl(aq) + 4H₃BO₃(aq) + 5H₂O(l)",
+          "rumus": "N HCl = mg boraks / (Fp × V HCl (mL) × BE boraks)",
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE boraks = BM/2 = 190,6 mg/mgrek | V HCl = volume titran HCl (mL)"
+        },
+        {
+          "id": "titri3",
+          "judul": "Standardisasi KMnO₄ dengan Asam Oksalat secara Permanganometri",
+          "tujuan": null,
+          "prinsip": "Dalam reaksi ini KMnO₄ dalam suasana asam mengalami reduksi menjadi Mn²⁺, sedangkan asam oksalat mengalami oksidasi menjadi CO₂, dan suhu diatur sampai 70°C. Dalam penitaran ini tidak dipakai indikator, karena kelebihan larutan KMnO₄ sedikit saja sudah memberikan warna merah muda pada titik akhir titrasi (auto-indikator).",
+          "reaksi": "2MnO₄⁻(aq) + 5H₂C₂O₄(aq) + 6H⁺(aq) → 2Mn²⁺(aq) + 10CO₂(g) + 8H₂O(l)",
+          "rumus": "N KMnO₄ = mg asam oksalat / (Fp × V KMnO₄ (mL) × BE oksalat)",
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE asam oksalat = BM/2 = 63 mg/mgrek | V KMnO₄ = volume titran KMnO₄ (mL)"
+        },
+        {
+          "id": "titri4",
+          "judul": "Standardisasi Larutan Tiosulfat 0,1 N dengan Bikromat secara Iodometri",
+          "tujuan": null,
+          "prinsip": "Natrium tiosulfat distandardisasi dengan bahan baku primer K₂Cr₂O₇. Reaksi K₂Cr₂O₇ dengan KI berlebih dalam suasana asam akan menghasilkan iod. Iod yang dibebaskan dititrasi dengan larutan tiosulfat, mendekati titik akhir ditambahkan indikator kanji hingga warna berubah dari biru tua menjadi hijau muda.",
+          "reaksi": "K₂Cr₂O₇(aq) + 6KI(aq) + 14HCl(aq) → 8KCl(aq) + 2CrCl₃(aq) + 7H₂O(l) + 3I₂(aq)\n2Na₂S₂O₃(aq) + I₂(aq) → Na₂S₄O₆(aq) + 2NaI(aq)",
+          "rumus": "N Na₂S₂O₃ = mg K₂Cr₂O₇ / (Fp × V tio (mL) × BE K₂Cr₂O₇)",
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE K₂Cr₂O₇ = BM/6 = 49 mg/mgrek | V tio = volume titran tiosulfat (mL)"
+        },
+        {
+          "id": "titri5",
+          "judul": "Standardisasi Larutan EDTA 0,01 M dengan CaCO₃ secara Kompleksometri",
+          "tujuan": null,
+          "prinsip": "Sebelum ion Ca²⁺ direaksikan dengan EDTA, ditambahkan buffer pH 10 yang mengandung ion Mg²⁺ dan indikator Erio-T (HIn²⁻) yang berwarna biru menjadi larutan berwarna merah. Setelah ion Ca²⁺ bereaksi semua dengan EDTA, kelebihan setetes EDTA menyebabkan larutan kembali menjadi biru sebagai titik akhir titrasi.",
+          "reaksi": "CaCO₃(aq) + 2HCl(aq) → CaCl₂(aq) + H₂O(l) + CO₂(g)\nCa²⁺ + H₂Y²⁻ → CaY²⁻ + 2H⁺",
+          "rumus": "M EDTA = mg CaCO₃ / (Fp × V EDTA (mL) × BM CaCO₃)",
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BM CaCO₃ = 100 g/mol | V EDTA = volume titran EDTA (mL)"
+        }
+      ]
+    }
+  ]
+}
