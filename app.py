@@ -729,30 +729,16 @@ elif st.session_state.mode == "materi":
                 st.markdown(f"<div style='font-weight:700;color:var(--brown);font-size:0.85rem;margin:0.8rem 0 0.3rem;letter-spacing:0.05em'>GOLONGAN {gol}</div>", unsafe_allow_html=True)
                 for k in kations:
                     with st.expander(f"Ion {k['ion']}", expanded=False):
-                        # Table header
-                        tabel = """
-                        <div style="overflow-x:auto">
-                        <table style="width:100%;border-collapse:collapse;font-size:0.82rem">
-                            <thead>
-                                <tr style="background:var(--green);color:white">
-                                    <th style="padding:8px;text-align:left;border-radius:8px 0 0 0">Pereaksi</th>
-                                    <th style="padding:8px;text-align:left">Persamaan Reaksi</th>
-                                    <th style="padding:8px;text-align:left;border-radius:0 8px 0 0">Pengamatan</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                        """
-                        for i, r in enumerate(k["reaksi"]):
-                            bg = "var(--white)" if i % 2 == 0 else "var(--cream2)"
-                            tabel += f"""
-                                <tr style="background:{bg}">
-                                    <td style="padding:8px;color:var(--brown);font-weight:600;vertical-align:top;min-width:120px">{r['pereaksi']}</td>
-                                    <td style="padding:8px;color:var(--text);font-family:monospace;font-size:0.78rem;vertical-align:top">{r['persamaan']}</td>
-                                    <td style="padding:8px;color:var(--green2);font-weight:600;vertical-align:top;min-width:150px">{r['pengamatan']}</td>
-                                </tr>
-                            """
-                        tabel += "</tbody></table></div>"
-                        st.markdown(tabel, unsafe_allow_html=True)
+                        import pandas as pd
+                        rows = []
+                        for r in k["reaksi"]:
+                            rows.append({
+                                "Pereaksi": r["pereaksi"],
+                                "Persamaan Reaksi": r["persamaan"],
+                                "Pengamatan": r["pengamatan"]
+                            })
+                        df = pd.DataFrame(rows)
+                        st.dataframe(df, use_container_width=True, hide_index=True)
 
         # ── GRAVIMETRI / TITRIMETRI ───────────────────────────────────────────
         else:
