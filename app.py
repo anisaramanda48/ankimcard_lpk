@@ -517,7 +517,7 @@ elif st.session_state.mode == "kalkulator":
 
     with st.expander("🧪 Pengenceran Larutan (C₁V₁ = C₂V₂)", expanded=True):
         st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ &nbsp;→&nbsp; V₁ = (C₂ × V₂) / C₁</div>', unsafe_allow_html=True)
-        unit = st.selectbox("Satuan konsentrasi", ["M (Molar)", "N (Normal)", "% (Persen)"], key="dil_unit")
+        unit = st.selectbox("(C) Satuan konsentrasi", ["M (Molar)", "N (Normal)", "% (Persen)"], key="dil_unit")
         col1, col2 = st.columns(2)
         with col1:
             c1_val = st.number_input("C₁ – Konsentrasi Awal", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="dil_c1")
@@ -565,39 +565,6 @@ elif st.session_state.mode == "kalkulator":
             else:
                 st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
-    with st.expander("🔄 Konversi Satuan Konsentrasi", expanded=False):
-        st.markdown('<div class="calc-formula">Konversi satuan konsentrasi yang umum dipakai di lab.</div>', unsafe_allow_html=True)
-        conv_type = st.selectbox("Pilih konversi", [
-            "% (b/v) → g/L",
-            "g/L → % (b/v)",
-            "mol/L → mg/L (perlu BM)",
-            "mg/L → mol/L (perlu BM)",
-        ], key="conv_type")
-        val_in = st.number_input("Nilai input", min_value=0.0, value=0.0, step=0.000001, format="%.6f", key="conv_val")
-        bm_conv = None
-        if "BM" in conv_type:
-            bm_conv = st.number_input("BM (g/mol)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="conv_bm")
-        if st.button("Konversi", key="calc_conv"):
-            result, unit_out, note = None, "", ""
-            try:
-                if conv_type == "% (b/v) → g/L":
-                    result, unit_out, note = val_in * 10.0, "g/L", "1% (b/v) = 10 g/L"
-                elif conv_type == "g/L → % (b/v)":
-                    result, unit_out, note = val_in / 10.0, "%", "10 g/L = 1% (b/v)"
-                elif conv_type == "mol/L → mg/L (perlu BM)":
-                    if bm_conv and bm_conv > 0:
-                        result, unit_out, note = val_in * bm_conv * 1000, "mg/L", "mol/L × BM × 1000"
-                    else:
-                        st.error("Masukkan nilai BM lebih dari 0.")
-                elif conv_type == "mg/L → mol/L (perlu BM)":
-                    if bm_conv and bm_conv > 0:
-                        result, unit_out, note = val_in / (bm_conv * 1000), "mol/L", "mg/L ÷ (BM × 1000)"
-                    else:
-                        st.error("Masukkan nilai BM lebih dari 0.")
-                if result is not None:
-                    st.markdown(f'<div class="result-output"><small>📢 Hasil ({unit_out}) &nbsp;·&nbsp; {note}</small>{result:.6f} {unit_out}</div>', unsafe_allow_html=True)
-            except Exception as e:
-                st.error(f"Error: {e}")
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # TENTANG KAMI
@@ -611,15 +578,15 @@ elif st.session_state.mode == "tentang":
         <div class="about-title">🧪 Tentang Aplikasi</div>
         <p style="font-size:0.9rem;color:var(--text2);line-height:1.7;margin:0">
             <b>Ankim-Card &amp; Calc</b> adalah web app interaktif yang dirancang untuk membantu
-            mahasiswa Kimia Analitik menghafal reaksi identifikasi kation/anion, karakteristik
+            mahasiswa AKA menghafal reaksi identifikasi kation, karakteristik
             endapan gravimetri, dan perubahan warna titrimetri — sekaligus menyediakan kalkulator
             untuk perhitungan larutan sehari-hari di laboratorium.
         </p>
         <br>
         <table style="width:100%;font-size:0.85rem;border-collapse:collapse">
-            <tr><td style="color:var(--text2);padding:4px 0;width:140px">📚 Mata Kuliah</td><td style="color:var(--text);font-weight:600">Kimia Analitik</td></tr>
-            <tr><td style="color:var(--text2);padding:4px 0">🏫 Program Studi</td><td style="color:var(--text);font-weight:600">— isi nama prodi —</td></tr>
-            <tr><td style="color:var(--text2);padding:4px 0">🏛️ Institusi</td><td style="color:var(--text);font-weight:600">— isi nama kampus —</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0;width:140px">📚 Mata Kuliah</td><td style="color:var(--text);font-weight:600">Logika Pemrograman Komputer</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0">🏫 Program Studi</td><td style="color:var(--text);font-weight:600">— Analisis Kimia —</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0">🏛️ Institusi</td><td style="color:var(--text);font-weight:600">— Politeknik AKA Bogor —</td></tr>
             <tr><td style="color:var(--text2);padding:4px 0">📅 Tahun</td><td style="color:var(--text);font-weight:600">2026</td></tr>
         </table>
     </div>
@@ -628,31 +595,31 @@ elif st.session_state.mode == "tentang":
         <div class="about-title">🎓 Anggota Kelompok</div>
         <div class="member-row">
             <div class="member-num">1</div>
-            <div><div class="member-name">— Nama Anggota 1 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Anisa Ramanda —</div><div class="member-nim">NIM: 2560576</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">2</div>
-            <div><div class="member-name">— Nama Anggota 2 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Galih Pratama —</div><div class="member-nim">NIM: 2060634</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">3</div>
-            <div><div class="member-name">— Nama Anggota 3 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— M. Djaky Tofanny —</div><div class="member-nim">NIM: 2560662</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">4</div>
-            <div><div class="member-name">— Nama Anggota 4 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Natasya Septiani —</div><div class="member-nim">NIM: 2560714</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">5</div>
-            <div><div class="member-name">— Nama Anggota 5 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Siti Fadilah Afkar —</div><div class="member-nim">NIM: 2560784</div></div>
         </div>
     </div>
 
     <div class="about-card">
-        <div class="about-title">👨‍🏫 Dosen Pengampu</div>
+        <div class="about-title">👨‍🏫 Dosen Penanggung Jawab</div>
         <div class="member-row">
             <div class="member-num">👤</div>
-            <div><div class="member-name">— Nama Dosen —</div><div class="member-nim">— NIP / Jabatan —</div></div>
+            <div><div class="member-name">— Ibu dewi Pujoningsih, M.Si. —</div><div 
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -789,7 +756,7 @@ elif st.session_state.mode == "materi":
 st.markdown("""
 <hr class='styled-hr'>
 <div style='text-align:center;font-size:0.78rem;color:var(--brown-lt);padding-bottom:1rem'>
-    🌿 Ankim-Card &amp; Calc &nbsp;·&nbsp; Kimia Analitik 2026
+    🌿 Ankim-Card &amp; Calc &nbsp;·&nbsp; Analisis Kimia 2026
 </div>
 """, unsafe_allow_html=True)
 
