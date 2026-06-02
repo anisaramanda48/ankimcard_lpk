@@ -15,7 +15,6 @@ def load_data():
     with open("data/flashcards.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
-@st.cache_data
 def load_materi():
     with open("data/materi.json", "r", encoding="utf-8") as f:
         return json.load(f)
