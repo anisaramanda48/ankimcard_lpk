@@ -13,17 +13,17 @@
         },
         {
           "id": 2,
-          "front": "Reaksi spesifik untuk mengidentifikasi kation Pb²⁺ menggunakan pereaksi K₂CrO₄ akan menghasilkan...",
+          "front": "Reaksi spesifik untuk mengidentifikasi kation Pb²⁺ menggunakan pereaksi K₂CrO₄ akan menghasilkan endapan... larutan berwarna...",
           "back": "Endapan berwarna KUNING, larutan tidak berwarna"
         },
         {
           "id": 3,
-          "front": "Kation Al³⁺ jika ditambahkan pereaksi NH₄OH akan menghasilkan...",
+          "front": "Kation Al³⁺ jika ditambahkan pereaksi NH₄OH akan menghasilkan endapan & larutan berwarna...",
           "back": "Endapan berwarna PUTIH, larutan tidak berwarna (Al(OH)₃)"
         },
         {
           "id": 4,
-          "front": "Kation Ba²⁺ jika ditambahkan pereaksi K₂CrO₄ akan menghasilkan...",
+          "front": "Kation Ba²⁺ jika ditambahkan pereaksi K₂CrO₄ akan menghasilkan endapan berwarna...",
           "back": "Endapan berwarna KUNING (BaCrO₄)"
         },
         {
@@ -33,7 +33,7 @@
         },
         {
           "id": 6,
-          "front": "Pada kation Sr²⁺ jika ditambahkan pereaksi Na₂CO₃ akan menghasilkan...",
+          "front": "Pada kation Sr²⁺ jika ditambahkan pereaksi Na₂CO₃ akan menghasilkan endapan & larutan berwarna...",
           "back": "Endapan berwarna PUTIH, larutan kuning"
         },
         {
@@ -51,51 +51,38 @@
       "cards": [
         {
           "id": 1,
-          "front": "Apa bedanya kertas saring kuantitatif (bebas abu seperti Whatman) dengan kertas saring biasa untuk laporan gravimetri?",
-          "back": "Kertas saring kuantitatif meninggalkan berat abu HAMPIR NOL saat dipijarkan di dalam tanur, sehingga tidak memengaruhi berat endapan murni."
+          "front": "Bagaimana bentuk fisik dan warna endapan Barium Sulfat (BaSO₄) yang terbentuk setelah ditambah H₂SO₄ ?",
+          "back": "Endapan putih halus (berupa kristalin)"
         },
         {
           "id": 2,
-          "front": "Whatman No. 41 digunakan untuk endapan berbentuk... sedangkan Whatman No. 42 untuk endapan berbentuk...",
-          "back": "No. 41 → endapan GELATIN/GUMPALAN BESAR (seperti Besi); No. 42 → endapan KRISTAL HALUS (seperti Barium)"
+          "front": "Bagaimana karakteristik fisik dan warna endapan Fe(OH)₃ setelah penambahan NH₄OH?",
+          "back": "Endapan cokelat kemerahan berbentuk seperti gelatin"
         },
         {
           "id": 3,
-          "front": "Bagaimana tampilan fisik dan warna endapan Barium Sulfat (BaSO₄) sesaat setelah ditambahkan reagen pengendap H₂SO₄?",
-          "back": "Endapan PUTIH HALUS berbentuk KRISTAL"
+          "front": "Apa warna akhir dari endapan Besi setelah mengalami proses pemijaran di dalam cawan?",
+          "back": "Merah bata tua (karena sudah berubah wujud  menjadi Fe₂O₃)"
         },
         {
           "id": 4,
-          "front": "Bagaimana cara menguji bahwa pencucian endapan BaSO₄ sudah bebas dari pengotor ion klorida (Cl⁻)?",
-          "back": "Filtrat cucian ditetesi AgNO₃. Jika filtrat TETAP JERNIH (tidak keruh putih), berarti endapan sudah bersih."
+          "front": "Apa yang terjadi pada warna endapan AgCl jika terkena paparan cahaya matahari langsung?",
+          "back": "Berubah menjadi keabu-abuan atau kehitaman karena sebagian AgCl terurai/tereduksi menjadi logam perak (Ag)"
+       
         },
         {
           "id": 5,
-          "front": "Bagaimana karakteristik fisik dan warna endapan Fe(OH)₃ setelah penambahan NH₄OH?",
-          "back": "Berbentuk GUMPALAN GELATIN (seperti lem/selai) berwarna COKELAT KEMERAHAN"
+          "front": "Bagaimana sifat fisik dan warna endapan Perak Klorida (AgCl) yang terbentuk dalam suasana asam?",
+          "back": "Endapan PUTIH BERGUMPAL"
+      
         },
         {
           "id": 6,
-          "front": "Setelah endapan besi dipijarkan di dalam tanur (suhu tinggi), warna endapan berubah menjadi...",
-          "back": "COKELAT KEHITAMAN / MERAH BATA TUA (karena berubah menjadi Fe₂O₃)"
-        },
-        {
-          "id": 7,
-          "front": "Bagaimana sifat fisik dan warna endapan Perak Klorida (AgCl) yang terbentuk dalam suasana asam?",
-          "back": "Endapan PUTIH BERGUMPAL"
-        },
-        {
-          "id": 8,
-          "front": "Apa yang terjadi pada warna endapan AgCl jika terkena paparan cahaya matahari langsung?",
-          "back": "Berubah menjadi KEABU-ABUAN atau UNGU KEHITAMAN karena perak tereduksi menjadi logam Ag"
-        },
-        {
-          "id": 9,
           "front": "Bagaimana wujud fisik sampel (misal tepung) setelah dipanaskan di oven 130°C pada analisis kadar air?",
           "back": "Tetap berupa SERBUK KERING, namun bobotnya menyusut akibat lepasnya air bebas."
         },
         {
-          "id": 10,
+          "id": 7,
           "front": "Bagaimana wujud visual sampel setelah dimasukkan ke dalam tanur 550°C pada analisis kadar abu?",
           "back": "Berubah menjadi SERBUK ABU berwarna PUTIH KEABU-ABUAN karena senyawa organik terbakar habis."
         }
@@ -103,7 +90,7 @@
     },
     {
       "id": "titrimetri",
-      "name": "Titrimetri / Volumetri",
+      "name": "Titrimetri",
       "icon": "🧫",
       "description": "Hafalan perubahan warna indikator dan Titik Akhir Titrasi (TAT).",
       "cards": [
