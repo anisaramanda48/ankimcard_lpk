@@ -2,7 +2,7 @@
   "materi": [
     {
       "id": "anjen",
-      "judul": "Analisis Jenis (Anjen)",
+      "judul": "Analisis Jenis",
       "icon": "🧪",
       "deskripsi": "Pemisahan dan identifikasi kation dalam golongan I–V menggunakan pereaksi selektif dan spesifik.",
       "tujuan": "Memisahkan kation berdasarkan golongannya menggunakan pereaksi selektif dan mengidentifikasi kation yang telah terpisah menggunakan pereaksi yang spesifik.",
@@ -146,7 +146,7 @@
     },
     {
       "id": "titrimetri",
-      "judul": "Titrimetri / Volumetri",
+      "judul": "Titrimetri",
       "icon": "🧫",
       "deskripsi": "Penetapan kadar zat berdasarkan volume larutan standar yang bereaksi dengan analit.",
       "percobaan": [
