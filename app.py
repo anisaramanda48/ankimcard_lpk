@@ -578,15 +578,15 @@ elif st.session_state.mode == "tentang":
         <div class="about-title">🧪 Tentang Aplikasi</div>
         <p style="font-size:0.9rem;color:var(--text2);line-height:1.7;margin:0">
             <b>Ankim-Card &amp; Calc</b> adalah web app interaktif yang dirancang untuk membantu
-            mahasiswa Kimia Analitik menghafal reaksi identifikasi kation/anion, karakteristik
+            mahasiswa AKA menghafal reaksi identifikasi kation, karakteristik
             endapan gravimetri, dan perubahan warna titrimetri — sekaligus menyediakan kalkulator
             untuk perhitungan larutan sehari-hari di laboratorium.
         </p>
         <br>
         <table style="width:100%;font-size:0.85rem;border-collapse:collapse">
-            <tr><td style="color:var(--text2);padding:4px 0;width:140px">📚 Mata Kuliah</td><td style="color:var(--text);font-weight:600">Kimia Analitik</td></tr>
-            <tr><td style="color:var(--text2);padding:4px 0">🏫 Program Studi</td><td style="color:var(--text);font-weight:600">— isi nama prodi —</td></tr>
-            <tr><td style="color:var(--text2);padding:4px 0">🏛️ Institusi</td><td style="color:var(--text);font-weight:600">— isi nama kampus —</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0;width:140px">📚 Mata Kuliah</td><td style="color:var(--text);font-weight:600">Logika Pemrograman Komputer</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0">🏫 Program Studi</td><td style="color:var(--text);font-weight:600">— Analisis Kimia —</td></tr>
+            <tr><td style="color:var(--text2);padding:4px 0">🏛️ Institusi</td><td style="color:var(--text);font-weight:600">— Politeknik AKA Bogor —</td></tr>
             <tr><td style="color:var(--text2);padding:4px 0">📅 Tahun</td><td style="color:var(--text);font-weight:600">2026</td></tr>
         </table>
     </div>
@@ -595,31 +595,31 @@ elif st.session_state.mode == "tentang":
         <div class="about-title">🎓 Anggota Kelompok</div>
         <div class="member-row">
             <div class="member-num">1</div>
-            <div><div class="member-name">— Nama Anggota 1 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Anisa Ramanda —</div><div class="member-nim">NIM: 2560576</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">2</div>
-            <div><div class="member-name">— Nama Anggota 2 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Galih Pratama —</div><div class="member-nim">NIM: 2560634</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">3</div>
-            <div><div class="member-name">— Nama Anggota 3 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— M. Djaky Tofanny —</div><div class="member-nim">NIM: 2560662</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">4</div>
-            <div><div class="member-name">— Nama Anggota 4 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Natasya Septiani —</div><div class="member-nim">NIM: 2560714</div></div>
         </div>
         <div class="member-row">
             <div class="member-num">5</div>
-            <div><div class="member-name">— Nama Anggota 5 —</div><div class="member-nim">NIM: —————————</div></div>
+            <div><div class="member-name">— Siti Fadilah Afkar —</div><div class="member-nim">NIM: 2560784</div></div>
         </div>
     </div>
 
     <div class="about-card">
-        <div class="about-title">👨‍🏫 Dosen Pengampu</div>
+        <div class="about-title">👨‍🏫 Dosen Penanggung Jawab</div>
         <div class="member-row">
             <div class="member-num">👤</div>
-            <div><div class="member-name">— Nama Dosen —</div><div class="member-nim">— NIP / Jabatan —</div></div>
+            <div><div class="member-name">— Ibu Dewi Pujoningsih —</div><div 
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -756,7 +756,7 @@ elif st.session_state.mode == "materi":
 st.markdown("""
 <hr class='styled-hr'>
 <div style='text-align:center;font-size:0.78rem;color:var(--brown-lt);padding-bottom:1rem'>
-    🌿 Ankim-Card &amp; Calc &nbsp;·&nbsp; Kimia Analitik 2026
+    🌿 Ankim-Card &amp; Calc &nbsp;·&nbsp; Analisis Kimia 2026
 </div>
 """, unsafe_allow_html=True)
 
