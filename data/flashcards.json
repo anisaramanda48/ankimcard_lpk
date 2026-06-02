@@ -4,12 +4,12 @@
       "id": "anjen",
       "name": "Analisis Jenis",
       "icon": "🧪",
-      "description": "Hafalan reaksi spesifik, warna larutan, dan endapan kation/anion.",
+      "description": "Hafalan warna larutan dan endapan kation.",
       "cards": [
         {
           "id": 1,
-          "front": "Kation Fe³⁺ jika ditambahkan pereaksi SCN⁻ akan menghasilkan...",
-          "back": "Larutan berwarna MERAH DARAH"
+          "front": "Kation Fe³⁺ jika ditambahkan pereaksi SCN⁻ akan menghasilkan larutan berwarna...",
+          "back": "Larutan berwarna MERAH"
         },
         {
           "id": 2,
