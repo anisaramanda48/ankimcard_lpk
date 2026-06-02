@@ -537,7 +537,7 @@ elif st.session_state.mode == "kalkulator":
         st.markdown('<div class="calc-formula">Rumus: M = massa (g) / [BM (g/mol) × Volume (L)]</div>', unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            massa_m = st.number_input("Massa zat (g)", min_value=0.0, value=0.0, step=0.01, format="%.4f", key="mol_massa")
+            massa_m = st.number_input("Massa zat (g)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="mol_massa")
         with col2:
             bm = st.number_input("BM (g/mol)", min_value=0.0, value=0.0, step=1.0, format="%.2f", key="mol_bm")
         with col3:
@@ -553,7 +553,7 @@ elif st.session_state.mode == "kalkulator":
         st.markdown('<div class="calc-formula">Rumus: N = massa (g) / [BE (g/grek) × Volume (L)]</div>', unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
         with col1:
-            massa_n = st.number_input("Massa zat (g)", min_value=0.0, value=0.0, step=0.01, format="%.4f", key="norm_massa")
+            massa_n = st.number_input("Massa zat (g)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="norm_massa")
         with col2:
             be = st.number_input("BE (g/grek)", min_value=0.0, value=0.0, step=1.0, format="%.2f", key="norm_be")
         with col3:
