@@ -283,7 +283,7 @@ div[data-testid="stButton"]:has(button[kind="secondary"].flip-btn) button,
 # ─── SESSION STATE ────────────────────────────────────────────────────────────
 def init_state():
     defaults = {
-        "mode": "flashcard",
+        "mode": "home",
         "view": "menu",
         "materi_view": "menu",
         "materi_id": None,
@@ -359,10 +359,14 @@ with col_t:
 
 st.markdown("<hr class='styled-hr'>", unsafe_allow_html=True)
 
+if st.session_state.mode == "home":
+    st.markdown('<div class="section-title">Selamat Datang! 👋</div>', unsafe_allow_html=True)
+    st.markdown('<div class="section-sub">Pilih menu di atas untuk mulai menggunakan Ankim-Card & Calc.</div>', unsafe_allow_html=True)
+
 # ═══════════════════════════════════════════════════════════════════════════════
 # FLASHCARD MODE
 # ═══════════════════════════════════════════════════════════════════════════════
-if st.session_state.mode == "flashcard":
+elif st.session_state.mode == "flashcard":
 
     if st.session_state.view == "menu":
         st.markdown('<div class="section-title">Pilih Kategori</div>', unsafe_allow_html=True)
