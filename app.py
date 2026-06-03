@@ -333,7 +333,7 @@ def progress_html(current, total):
 st.markdown("""
 <div class="site-header">
     <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
-    <div class="tagline">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia Analitik</div>
+    <div class="tagline">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
 </div>
 """, unsafe_allow_html=True)
 
