@@ -3,6 +3,7 @@ import json
 import random
 
 # ─── PAGE CONFIG ─────────────────────────────────────────────────────────────
+
 st.set_page_config(
     page_title="Ankim-Card & Calc",
     page_icon="🧪",
@@ -11,6 +12,7 @@ st.set_page_config(
 )
 
 # ─── LOAD DATA ────────────────────────────────────────────────────────────────
+
 def load_data():
     with open("data/flashcards.json", "r", encoding="utf-8") as f:
         return json.load(f)
@@ -25,24 +27,25 @@ materi_data = load_materi()
 all_materi = materi_data["materi"]
 
 # ─── CUSTOM CSS ──────────────────────────────────────────────────────────────
+
 st.markdown("""
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Lato:wght@300;400;700&display=swap');
 
 :root {
-    --cream:    #F5F0E8;
-    --cream2:   #EDE6D6;
-    --green:    #2D5A3D;
-    --green2:   #3D7A52;
-    --green3:   #4E9A68;
+    --cream: #F5F0E8;
+    --cream2: #EDE6D6;
+    --green: #2D5A3D;
+    --green2: #3D7A52;
+    --green3: #4E9A68;
     --green-lt: #C8DDD1;
-    --brown:    #6B4F3A;
+    --brown: #6B4F3A;
     --brown-lt: #C4A882;
-    --text:     #2C2416;
-    --text2:    #5C4A32;
-    --white:    #FEFCF8;
-    --shadow:   0 4px 20px rgba(45,90,61,0.12);
-    --shadow2:  0 8px 32px rgba(45,90,61,0.18);
+    --text: #2C2416;
+    --text2: #5C4A32;
+    --white: #FEFCF8;
+    --shadow: 0 4px 20px rgba(45,90,61,0.12);
+    --shadow2: 0 8px 32px rgba(45,90,61,0.18);
 }
 
 html, body, [class*="css"] {
@@ -50,36 +53,143 @@ html, body, [class*="css"] {
     background-color: var(--cream);
     color: var(--text);
 }
+
 .stApp {
     background: linear-gradient(160deg, var(--cream) 0%, var(--cream2) 100%);
     min-height: 100vh;
 }
+
 #MainMenu, footer, header { visibility: hidden; }
 .block-container { padding-top: 2rem; padding-bottom: 4rem; max-width: 760px; }
 h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
 
-/* ── HEADER ── */
-.site-header {
+/* ══════════════════════════════════════════════
+   HERO HEADER (halaman utama)
+══════════════════════════════════════════════ */
+.hero-container {
     text-align: center;
-    padding: 2rem 1rem 1rem;
+    padding: 2.5rem 1.5rem 2rem;
+    background: linear-gradient(135deg, #1a3d2b 0%, #2D5A3D 55%, #3D7A52 100%);
+    border-radius: 24px;
+    margin-bottom: 1.8rem;
+    box-shadow: 0 12px 40px rgba(45,90,61,0.30);
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-container::before {
+    content: '';
+    position: absolute;
+    top: -40px; right: -40px;
+    width: 200px; height: 200px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+}
+.hero-container::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -30px;
+    width: 250px; height: 250px;
+    background: rgba(255,255,255,0.03);
+    border-radius: 50%;
+}
+
+.hero-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.2rem;
+    margin-bottom: 1rem;
+    font-size: 2.8rem;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-icon-main {
+    font-size: 3.8rem;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
+}
+
+.hero-icon-side {
+    font-size: 2.2rem;
+    opacity: 0.75;
+    animation: float 3s ease-in-out infinite;
+}
+
+.hero-icon-side:first-child { animation-delay: -1s; }
+.hero-icon-side:last-child  { animation-delay: -2s; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+}
+
+.hero-title {
+    font-size: 2.8rem;
+    font-weight: 800;
+    font-family: 'Playfair Display', serif;
+    background: linear-gradient(90deg, #a8e6c0, #ffffff, #a8e6c0);
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 4s linear infinite;
+    margin: 0.2rem 0;
+    position: relative;
+    z-index: 1;
+    letter-spacing: -0.5px;
+}
+
+@keyframes shine {
+    to { background-position: 200% center; }
+}
+
+.hero-subtitle {
+    font-size: 0.92rem;
+    color: rgba(255,255,255,0.72);
+    margin-top: 0.5rem;
+    font-style: italic;
+    position: relative;
+    z-index: 1;
+    letter-spacing: 0.03em;
+}
+
+.hero-badges {
+    display: flex;
+    justify-content: center;
+    gap: 0.7rem;
+    margin-top: 1.4rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 1;
+}
+
+.hero-badge {
+    background: rgba(255,255,255,0.12);
+    border: 1px solid rgba(255,255,255,0.22);
+    border-radius: 50px;
+    padding: 0.35rem 1rem;
+    color: rgba(255,255,255,0.88);
+    font-size: 0.80rem;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+    backdrop-filter: blur(4px);
+}
+
+/* ── SITE HEADER (non-home, compact) ── */
+.site-header-compact {
+    text-align: center;
+    padding: 1rem 1rem 0.8rem;
     border-bottom: 2px solid var(--green-lt);
     margin-bottom: 1.5rem;
 }
-.site-header .logo {
-    font-size: 2.6rem;
+.site-header-compact .logo {
+    font-size: 1.5rem;
     font-family: 'Playfair Display', serif;
     color: var(--green);
-    letter-spacing: -1px;
-    line-height: 1.1;
+    letter-spacing: -0.5px;
 }
-.site-header .logo span { color: var(--brown); }
-.site-header .tagline {
-    font-size: 0.85rem;
-    color: var(--text2);
-    margin-top: 0.4rem;
-    letter-spacing: 0.05em;
-    font-style: italic;
-}
+.site-header-compact .logo span { color: var(--brown); }
 
 /* ── CATEGORY CARDS ── */
 .cat-card {
@@ -150,18 +260,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
     font-size: 1.2rem; color: #FFFFFF; line-height: 1.6; font-weight: 600;
 }
 
-/* ── TOMBOL FLIP TRANSPARAN ── */
-div[data-testid="stButton"]:has(button[kind="secondary"].flip-btn) button,
-.flip-overlay button {
-    background: transparent !important;
-    border: 2px dashed var(--green-lt) !important;
-    color: var(--green) !important;
-    border-radius: 50px !important;
-    font-size: 0.85rem !important;
-    padding: 0.5rem 2rem !important;
-    transition: all 0.2s !important;
-}
-
 /* ── PROGRESS ── */
 .progress-wrap { margin: 0.5rem 0 0.8rem; }
 .progress-label {
@@ -189,7 +287,7 @@ div[data-testid="stButton"]:has(button[kind="secondary"].flip-btn) button,
 .result-box .result-emoji { font-size: 4rem; margin-bottom: 0.5rem; }
 .result-box .result-title { font-family: 'Playfair Display', serif; font-size: 1.8rem; color: var(--green); }
 .result-box .result-score { font-size: 3rem; font-weight: 700; color: var(--green2); margin: 0.5rem 0; }
-.result-box .result-sub { font-size: 0.9rem; color: var(--text2); }
+.result-box .result-sub   { font-size: 0.9rem; color: var(--text2); }
 
 /* ── KALKULATOR ── */
 .calc-formula {
@@ -268,7 +366,6 @@ div[data-testid="stButton"]:has(button[kind="secondary"].flip-btn) button,
     background: var(--cream2) !important; transform: none !important;
     box-shadow: none !important;
 }
-
 .stNumberInput input, .stSelectbox select {
     background: var(--cream) !important; border: 1.5px solid var(--green-lt) !important;
     border-radius: 10px !important; font-family: 'Lato', sans-serif !important;
@@ -281,6 +378,7 @@ div[data-testid="stButton"]:has(button[kind="secondary"].flip-btn) button,
 """, unsafe_allow_html=True)
 
 # ─── SESSION STATE ────────────────────────────────────────────────────────────
+
 def init_state():
     defaults = {
         "mode": "home",
@@ -311,31 +409,56 @@ def start_session(cat_id, shuffle=True, review_cards=None):
     deck = review_cards if review_cards else list(cat["cards"])
     if shuffle:
         random.shuffle(deck)
-    st.session_state.category_id = cat_id
-    st.session_state.deck = deck
-    st.session_state.current_idx = 0
-    st.session_state.flipped = False
-    st.session_state.score_ingat = 0
-    st.session_state.score_lupa = 0
-    st.session_state.wrong_cards = []
-    st.session_state.review_mode = bool(review_cards)
-    st.session_state.view = "session"
+    st.session_state.category_id  = cat_id
+    st.session_state.deck          = deck
+    st.session_state.current_idx   = 0
+    st.session_state.flipped       = False
+    st.session_state.score_ingat   = 0
+    st.session_state.score_lupa    = 0
+    st.session_state.wrong_cards   = []
+    st.session_state.review_mode   = bool(review_cards)
+    st.session_state.view          = "session"
 
 def progress_html(current, total):
     pct = int((current / total) * 100) if total > 0 else 0
     return f"""
-    <div class="progress-wrap">
-        <div class="progress-label"><span>Kartu {current} dari {total}</span><span>{pct}%</span></div>
-        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:{pct}%"></div></div>
-    </div>"""
+<div class="progress-wrap">
+  <div class="progress-label"><span>Kartu {current} dari {total}</span><span>{pct}%</span></div>
+  <div class="progress-bar-bg"><div class="progress-bar-fill" style="width:{pct}%"></div></div>
+</div>"""
 
 # ─── HEADER ──────────────────────────────────────────────────────────────────
-st.markdown("""
-<div class="site-header">
-    <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
-    <div class="tagline">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
-</div>
-""", unsafe_allow_html=True)
+# ✅ PERUBAHAN 1 & 2:
+#    - Halaman Home → Hero besar dengan ikon laboratorium & animasi
+#    - Halaman lain → Header kompak tanpa judul besar
+
+if st.session_state.mode == "home":
+    # HERO HEADER — hanya tampil di halaman utama
+    st.markdown("""
+    <div class="hero-container">
+        <div class="hero-icons">
+            <span class="hero-icon-side">⚗️</span>
+            <span class="hero-icon-main">🔬</span>
+            <span class="hero-icon-side">⚖️</span>
+        </div>
+        <div class="hero-title">Ankim-Card &amp; Calc</div>
+        <div class="hero-subtitle">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
+        <div class="hero-badges">
+            <span class="hero-badge">🧪 Flashcard Interaktif</span>
+            <span class="hero-badge">🧮 Kalkulator Rumus</span>
+            <span class="hero-badge">📖 Materi Praktikum</span>
+        </div>
+    </div>
+    """, unsafe_allow_html=True)
+else:
+    # COMPACT HEADER — halaman selain home
+    st.markdown("""
+    <div class="site-header-compact">
+        <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
+    </div>
+    """, unsafe_allow_html=True)
+
+# ─── NAVIGASI ────────────────────────────────────────────────────────────────
 
 col_f, col_k, col_m, col_t = st.columns(4)
 with col_f:
@@ -359,16 +482,23 @@ with col_t:
 
 st.markdown("<hr class='styled-hr'>", unsafe_allow_html=True)
 
+# ═══════════════════════════════════════════════════════════════════════════════
+# HOME MODE
+# ═══════════════════════════════════════════════════════════════════════════════
+
 if st.session_state.mode == "home":
     st.markdown('<div class="section-title">Selamat Datang! 👋</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-sub">Pilih menu di atas untuk mulai menggunakan Ankim-Card & Calc.</div>', unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # FLASHCARD MODE
+# ✅ PERUBAHAN 2: Tidak ada judul "AnkiMCard" besar di sini, langsung ke konten
 # ═══════════════════════════════════════════════════════════════════════════════
+
 elif st.session_state.mode == "flashcard":
 
     if st.session_state.view == "menu":
+        # Langsung tampilkan pilih kategori tanpa judul AnkiMCard
         st.markdown('<div class="section-title">Pilih Kategori</div>', unsafe_allow_html=True)
         st.markdown('<div class="section-sub">Pilih materi yang ingin kamu hafal hari ini.</div>', unsafe_allow_html=True)
 
@@ -382,6 +512,7 @@ elif st.session_state.mode == "flashcard":
                 <div class="cat-count">📋 {total} kartu</div>
             </div>
             """, unsafe_allow_html=True)
+
             c1, c2 = st.columns(2)
             with c1:
                 if st.button("🚀 Mulai Belajar", key=f"start_{cat['id']}", use_container_width=True):
@@ -417,7 +548,6 @@ elif st.session_state.mode == "flashcard":
             <span class="badge badge-lupa">❌ Lupa: {st.session_state.score_lupa}</span>
         </div>""", unsafe_allow_html=True)
 
-        # ── FLASHCARD ──
         flip_class = "flipped" if st.session_state.flipped else ""
         st.markdown(f"""
         <div class="flashcard-wrap">
@@ -435,7 +565,6 @@ elif st.session_state.mode == "flashcard":
         </div>
         """, unsafe_allow_html=True)
 
-        # Tombol flip
         flip_label = "👁️ Lihat Jawaban" if not st.session_state.flipped else "🔁 Sembunyikan Jawaban"
         st.markdown('<div class="btn-flip">', unsafe_allow_html=True)
         if st.button(flip_label, key="flip_btn", use_container_width=True):
@@ -476,10 +605,10 @@ elif st.session_state.mode == "flashcard":
         total = st.session_state.score_ingat + st.session_state.score_lupa
         pct   = int((st.session_state.score_ingat / total) * 100) if total > 0 else 0
 
-        if pct == 100:  emoji, title = "🏆", "Sempurna!"
-        elif pct >= 70: emoji, title = "🌿", "Bagus Sekali!"
-        elif pct >= 40: emoji, title = "📚", "Terus Belajar!"
-        else:           emoji, title = "💪", "Jangan Menyerah!"
+        if pct == 100:   emoji, title = "🏆", "Sempurna!"
+        elif pct >= 70:  emoji, title = "🌿", "Bagus Sekali!"
+        elif pct >= 40:  emoji, title = "📚", "Terus Belajar!"
+        else:            emoji, title = "💪", "Jangan Menyerah!"
 
         st.markdown(f"""
         <div class="result-box">
@@ -508,16 +637,20 @@ elif st.session_state.mode == "flashcard":
                     st.rerun()
         with c3:
             if st.button("🏠 Menu Utama", use_container_width=True):
+                st.session_state.mode = "home"
                 st.session_state.view = "menu"
                 st.rerun()
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # KALKULATOR MODE
+# ✅ PERUBAHAN 3: Tambah expander baru "Cari Konsentrasi" dengan 3 metode
 # ═══════════════════════════════════════════════════════════════════════════════
+
 elif st.session_state.mode == "kalkulator":
     st.markdown('<div class="section-title">🧮 Kalkulator Kimia</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-sub">Pilih jenis perhitungan di bawah ini.</div>', unsafe_allow_html=True)
 
+    # ── Pengenceran ──────────────────────────────────────────────────────────
     with st.expander("🧪 Pengenceran Larutan (C₁V₁ = C₂V₂)", expanded=True):
         st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ &nbsp;→&nbsp; V₁ = (C₂ × V₂) / C₁</div>', unsafe_allow_html=True)
         unit = st.selectbox("Satuan konsentrasi", ["M (Molar)", "N (Normal)", "% (Persen)"], key="dil_unit")
@@ -536,6 +669,69 @@ elif st.session_state.mode == "kalkulator":
             else:
                 st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
+    # ── Cari Konsentrasi (BARU) ───────────────────────────────────────────────
+    with st.expander("🔍 Cari Konsentrasi Larutan", expanded=False):
+        st.markdown('<div class="calc-formula">Hitung konsentrasi dari berbagai data yang diketahui.</div>', unsafe_allow_html=True)
+
+        metode = st.radio(
+            "Pilih metode perhitungan:",
+            [
+                "Dari mol & volume  →  C = n / V",
+                "Dari massa, Mr & volume  →  C = m / (Mr × V)",
+                "Dari % massa & densitas  →  C = (% × ρ × 1000) / (Mr × 100)",
+            ],
+            key="konsen_metode"
+        )
+
+        st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
+
+        if metode == "Dari mol & volume  →  C = n / V":
+            st.markdown('<div class="calc-formula">C = n / V &nbsp;|&nbsp; C dalam mol/L (M)</div>', unsafe_allow_html=True)
+            col1, col2 = st.columns(2)
+            with col1:
+                n_val = st.number_input("Jumlah mol zat (mol)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="c_n")
+            with col2:
+                v_val = st.number_input("Volume larutan (L)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="c_v1")
+            if st.button("Hitung Konsentrasi", key="calc_konsen1"):
+                if v_val > 0 and n_val > 0:
+                    c = n_val / v_val
+                    st.markdown(f'<div class="result-output"><small>📢 Konsentrasi Larutan</small>{c:.4f} mol/L (M)</div>', unsafe_allow_html=True)
+                else:
+                    st.error("Isi semua kolom dengan nilai lebih dari 0.")
+
+        elif metode == "Dari massa, Mr & volume  →  C = m / (Mr × V)":
+            st.markdown('<div class="calc-formula">C = m / (Mr × V) &nbsp;|&nbsp; m dalam gram, V dalam Liter</div>', unsafe_allow_html=True)
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                m_val  = st.number_input("Massa zat (g)", min_value=0.0, value=0.0, step=0.01, format="%.4f", key="c_m")
+            with col2:
+                mr_val = st.number_input("Massa molar Mr (g/mol)", min_value=0.0, value=0.0, step=0.01, format="%.2f", key="c_mr")
+            with col3:
+                v_val  = st.number_input("Volume larutan (L)", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="c_v2")
+            if st.button("Hitung Konsentrasi", key="calc_konsen2"):
+                if m_val > 0 and mr_val > 0 and v_val > 0:
+                    c = m_val / (mr_val * v_val)
+                    st.markdown(f'<div class="result-output"><small>📢 Konsentrasi Larutan</small>{c:.4f} mol/L (M)</div>', unsafe_allow_html=True)
+                else:
+                    st.error("Isi semua kolom dengan nilai lebih dari 0.")
+
+        elif metode == "Dari % massa & densitas  →  C = (% × ρ × 1000) / (Mr × 100)":
+            st.markdown('<div class="calc-formula">C = (% × ρ × 1000) / (Mr × 100) &nbsp;|&nbsp; ρ dalam g/mL</div>', unsafe_allow_html=True)
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                pct_val = st.number_input("Kadar / % massa (%)", min_value=0.0, max_value=100.0, value=0.0, step=0.1, format="%.2f", key="c_pct")
+            with col2:
+                rho_val = st.number_input("Densitas ρ (g/mL)", min_value=0.0, value=0.0, step=0.001, format="%.4f", key="c_rho")
+            with col3:
+                mr_val2 = st.number_input("Massa molar Mr (g/mol)", min_value=0.0, value=0.0, step=0.01, format="%.2f", key="c_mr2")
+            if st.button("Hitung Konsentrasi", key="calc_konsen3"):
+                if pct_val > 0 and rho_val > 0 and mr_val2 > 0:
+                    c = (pct_val * rho_val * 1000) / (mr_val2 * 100)
+                    st.markdown(f'<div class="result-output"><small>📢 Konsentrasi Larutan</small>{c:.4f} mol/L (M)</div>', unsafe_allow_html=True)
+                else:
+                    st.error("Isi semua kolom dengan nilai lebih dari 0.")
+
+    # ── Molaritas ─────────────────────────────────────────────────────────────
     with st.expander("⚖️ Molaritas (M)", expanded=False):
         st.markdown('<div class="calc-formula">Rumus: M = massa (g) / [BM (g/mol) × Volume (L)]</div>', unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
@@ -552,6 +748,7 @@ elif st.session_state.mode == "kalkulator":
             else:
                 st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
+    # ── Normalitas ────────────────────────────────────────────────────────────
     with st.expander("⚗️ Normalitas (N)", expanded=False):
         st.markdown('<div class="calc-formula">Rumus: N = massa (g) / [BE (g/grek) × Volume (L)]</div>', unsafe_allow_html=True)
         col1, col2, col3 = st.columns(3)
@@ -568,11 +765,10 @@ elif st.session_state.mode == "kalkulator":
             else:
                 st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
-
-
 # ═══════════════════════════════════════════════════════════════════════════════
 # TENTANG KAMI
 # ═══════════════════════════════════════════════════════════════════════════════
+
 elif st.session_state.mode == "tentang":
     st.markdown('<div class="section-title">👥 Tentang Kami</div>', unsafe_allow_html=True)
     st.markdown('<div class="section-sub">Kelompok pembuat Ankim-Card &amp; Calc</div>', unsafe_allow_html=True)
@@ -594,7 +790,6 @@ elif st.session_state.mode == "tentang":
             <tr><td style="color:var(--text2);padding:4px 0">📅 Tahun</td><td style="color:var(--text);font-weight:600">2026</td></tr>
         </table>
     </div>
-
     <div class="about-card">
         <div class="about-title">🎓 Anggota Kelompok</div>
         <div class="member-row">
@@ -618,12 +813,11 @@ elif st.session_state.mode == "tentang":
             <div><div class="member-name">— Siti Fadilah Afkar —</div><div class="member-nim">NIM: 2560784</div></div>
         </div>
     </div>
-
     <div class="about-card">
         <div class="about-title">👨‍🏫 Dosen Penanggung Jawab</div>
         <div class="member-row">
             <div class="member-num">👤</div>
-            <div><div class="member-name">— Ibu Dewi Pujoningsih, M.Si —</div><div 
+            <div><div class="member-name">— Ibu Dewi Pujoningsih, M.Si —</div></div>
         </div>
     </div>
     """, unsafe_allow_html=True)
@@ -631,12 +825,12 @@ elif st.session_state.mode == "tentang":
 # ═══════════════════════════════════════════════════════════════════════════════
 # MATERI MODE
 # ═══════════════════════════════════════════════════════════════════════════════
+
 elif st.session_state.mode == "materi":
 
     def get_materi(mid):
         return next((m for m in all_materi if m["id"] == mid), None)
 
-    # ── MENU MATERI ──────────────────────────────────────────────────────────
     if st.session_state.materi_view == "menu":
         st.markdown('<div class="section-title">📖 Materi Praktikum</div>', unsafe_allow_html=True)
         st.markdown('<div class="section-sub">Pilih materi untuk melihat prinsip, reaksi, dan rumus perhitungan.</div>', unsafe_allow_html=True)
@@ -650,12 +844,11 @@ elif st.session_state.mode == "materi":
             </div>
             """, unsafe_allow_html=True)
             if st.button(f"📖 Buka {m['judul']}", key=f"open_materi_{m['id']}", use_container_width=True):
-                st.session_state.materi_id = m["id"]
+                st.session_state.materi_id   = m["id"]
                 st.session_state.materi_view = "detail"
                 st.rerun()
             st.markdown("<div style='height:0.3rem'></div>", unsafe_allow_html=True)
 
-    # ── DETAIL MATERI ─────────────────────────────────────────────────────────
     elif st.session_state.materi_view == "detail":
         m = get_materi(st.session_state.materi_id)
 
@@ -670,9 +863,7 @@ elif st.session_state.mode == "materi":
         st.markdown(f"<div class='section-title'>{m['icon']} {m['judul']}</div>", unsafe_allow_html=True)
         st.markdown(f"<div class='section-sub'>{m['deskripsi']}</div>", unsafe_allow_html=True)
 
-        # ── ANJEN ────────────────────────────────────────────────────────────
         if m["id"] == "anjen":
-            # Tujuan & Prinsip
             with st.expander("🎯 Tujuan & Prinsip", expanded=True):
                 st.markdown(f"""
                 <div class="about-card" style="margin-bottom:0.5rem">
@@ -685,7 +876,6 @@ elif st.session_state.mode == "materi":
                 </div>
                 """, unsafe_allow_html=True)
 
-            # Reaksi per kation
             st.markdown("<div style='height:0.5rem'></div>", unsafe_allow_html=True)
             st.markdown("<div style='font-family:Playfair Display,serif;font-size:1.1rem;color:var(--green);margin-bottom:0.5rem'>⚗️ Reaksi Identifikasi Kation</div>", unsafe_allow_html=True)
 
@@ -710,13 +900,9 @@ elif st.session_state.mode == "materi":
                             })
                         df = pd.DataFrame(rows)
                         st.dataframe(df, use_container_width=True, hide_index=True)
-
-        # ── GRAVIMETRI / TITRIMETRI ───────────────────────────────────────────
         else:
             for perc in m["percobaan"]:
                 with st.expander(f"📌 {perc['judul']}", expanded=False):
-
-                    # Tujuan (hanya gravimetri)
                     if perc.get("tujuan"):
                         st.markdown(f"""
                         <div class="about-card" style="margin-bottom:0.6rem">
@@ -725,7 +911,6 @@ elif st.session_state.mode == "materi":
                         </div>
                         """, unsafe_allow_html=True)
 
-                    # Prinsip
                     st.markdown(f"""
                     <div class="about-card" style="margin-bottom:0.6rem">
                         <div class="about-title">🔬 Prinsip</div>
@@ -733,7 +918,6 @@ elif st.session_state.mode == "materi":
                     </div>
                     """, unsafe_allow_html=True)
 
-                    # Reaksi
                     if perc.get("reaksi"):
                         reaksi_html = perc["reaksi"].replace("\n", "<br>")
                         st.markdown(f"""
@@ -743,7 +927,6 @@ elif st.session_state.mode == "materi":
                         </div>
                         """, unsafe_allow_html=True)
 
-                    # Rumus
                     if perc.get("rumus"):
                         keterangan_items = "".join([f"<div>• {k}</div>" for k in perc["keterangan_rumus"].split(" | ")])
                         st.markdown(f"""
@@ -754,14 +937,11 @@ elif st.session_state.mode == "materi":
                         </div>
                         """, unsafe_allow_html=True)
 
-
-
 # ─── FOOTER ──────────────────────────────────────────────────────────────────
+
 st.markdown("""
 <hr class='styled-hr'>
 <div style='text-align:center;font-size:0.78rem;color:var(--brown-lt);padding-bottom:1rem'>
     🌿 Ankim-Card &amp; Calc &nbsp;·&nbsp; Analisis Kimia 2026
 </div>
 """, unsafe_allow_html=True)
-
-
