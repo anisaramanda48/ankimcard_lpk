@@ -643,14 +643,11 @@ elif st.session_state.mode == "flashcard":
 # ✅ PERUBAHAN 3: Tambah expander baru "Cari Konsentrasi" dengan 3 metode
 # ═══════════════════════════════════════════════════════════════════════════════
 
-elif st.session_state.mode == "kalkulator":
-    st.markdown('<div class="section-title">🧮 Kalkulator Kimia</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-sub">Pilih jenis perhitungan di bawah ini.</div>', unsafe_allow_html=True)
+elif st.session_state.mode=="kalkulator":
 
-    # ── Pengenceran ──────────────────────────────────────────────────────────
     with st.expander("🧪 Pengenceran Larutan (C₁V₁ = C₂V₂)", expanded=True):
-        st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ </div>', unsafe_allow_html=True)
-       cari=st.radio("Yang ingin dicari:"),
+        st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂</div>',unsafe_allow_html=True)
+        cari=st.radio("Yang ingin dicari:",
             ["Cari V₁ (volume yang diambil)","Cari C₂ (konsentrasi akhir)"],
             key="pengenceran_cari")
 
@@ -665,6 +662,18 @@ elif st.session_state.mode == "kalkulator":
                     hasil=(c2v*v2v)/c1v
                     st.markdown(f'<div class="result-output"><small>📢 Volume yang diambil (V₁)</small>{hasil:.4f} mL</div>',unsafe_allow_html=True)
                     if hasil>v2v: st.warning("⚠️ V₁ > V₂ — periksa kembali nilai yang dimasukkan.")
+                else: st.error("Isi semua kolom dengan nilai lebih dari 0.")
+
+        else:
+            st.markdown("**Masukkan nilai C₁, V₁, dan V₂:**")
+            col1,col2,col3=st.columns(3)
+            with col1: c1c=st.number_input("C₁ – Konsentrasi Awal",min_value=0.0,value=0.0,step=0.0001,format="%.4f",key="c2_c1")
+            with col2: v1c=st.number_input("V₁ – Volume Awal (mL)",min_value=0.0,value=0.0,step=0.01,format="%.2f",key="c2_v1")
+            with col3: v2c=st.number_input("V₂ – Volume Akhir (mL)",min_value=0.0,value=0.0,step=0.01,format="%.2f",key="c2_v2")
+            if st.button("Hitung C₂",key="calc_c2"):
+                if c1c>0 and v1c>0 and v2c>0:
+                    hasil=(c1c*v1c)/v2c
+                    st.markdown(f'<div class="result-output"><small>📢 Konsentrasi Akhir (C₂)</small>{hasil:.4f} M</div>',unsafe_allow_html=True)
                 else: st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
     # ── Molaritas ─────────────────────────────────────────────────────────────
