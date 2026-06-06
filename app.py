@@ -68,13 +68,21 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
 ══════════════════════════════════════════════ */
 .hero-container {
     text-align: center;
-    padding: 2.5rem 1.5rem 2rem;
+    padding: 1.6rem 1.2rem 1.4rem;
     background: linear-gradient(135deg, #1a3d2b 0%, #2D5A3D 55%, #3D7A52 100%);
-    border-radius: 24px;
-    margin-bottom: 1.8rem;
-    box-shadow: 0 12px 40px rgba(45,90,61,0.30);
+    border-radius: 20px;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 8px 28px rgba(45,90,61,0.28);
     position: relative;
     overflow: hidden;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        padding: 2.5rem 1.5rem 2rem;
+        border-radius: 24px;
+        margin-bottom: 1.8rem;
+    }
 }
 
 .hero-container::before {
@@ -106,15 +114,20 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
 }
 
 .hero-icon-main {
-    font-size: 3.8rem;
+    font-size: 2.6rem;
     animation: float 3s ease-in-out infinite;
     filter: drop-shadow(0 4px 8px rgba(0,0,0,0.3));
 }
 
 .hero-icon-side {
-    font-size: 2.2rem;
+    font-size: 1.6rem;
     opacity: 0.75;
     animation: float 3s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+    .hero-icon-main { font-size: 3.8rem; }
+    .hero-icon-side { font-size: 2.2rem; }
 }
 
 .hero-icon-side:first-child { animation-delay: -1s; }
@@ -126,7 +139,7 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
 }
 
 .hero-title {
-    font-size: 2.8rem;
+    font-size: 2rem;
     font-weight: 800;
     font-family: 'Playfair Display', serif;
     background: linear-gradient(90deg, #a8e6c0, #ffffff, #a8e6c0);
@@ -138,6 +151,10 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
     position: relative;
     z-index: 1;
     letter-spacing: -0.5px;
+}
+
+@media (min-width: 768px) {
+    .hero-title { font-size: 2.8rem; }
 }
 
 @keyframes shine {
@@ -152,28 +169,6 @@ h1, h2, h3 { font-family: 'Playfair Display', serif; color: var(--green); }
     position: relative;
     z-index: 1;
     letter-spacing: 0.03em;
-}
-
-.hero-badges {
-    display: flex;
-    justify-content: center;
-    gap: 0.7rem;
-    margin-top: 1.4rem;
-    flex-wrap: wrap;
-    position: relative;
-    z-index: 1;
-}
-
-.hero-badge {
-    background: rgba(255,255,255,0.12);
-    border: 1px solid rgba(255,255,255,0.22);
-    border-radius: 50px;
-    padding: 0.35rem 1rem;
-    color: rgba(255,255,255,0.88);
-    font-size: 0.80rem;
-    font-weight: 600;
-    letter-spacing: 0.02em;
-    backdrop-filter: blur(4px);
 }
 
 /* ── SITE HEADER (non-home, compact) ── */
@@ -443,11 +438,6 @@ if st.session_state.mode == "home":
         </div>
         <div class="hero-title">Ankim-Card &amp; Calc</div>
         <div class="hero-subtitle">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
-        <div class="hero-badges">
-            <span class="hero-badge">🧪 Flashcard Interaktif</span>
-            <span class="hero-badge">🧮 Kalkulator Rumus</span>
-            <span class="hero-badge">📖 Materi Praktikum</span>
-        </div>
         <div style="margin-top:1.2rem;color:rgba(255,255,255,0.9);font-size:1rem;position:relative;z-index:1">
             Selamat Datang! 👋<br>
             <span style="font-size:0.85rem;opacity:0.8">Pilih menu di bawah untuk mulai menggunakan Ankim-Card &amp; Calc.</span>
@@ -461,7 +451,6 @@ else:
         <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
     </div>
     """, unsafe_allow_html=True)
-    st.markdown("<hr class='styled-hr'>", unsafe_allow_html=True)
 
 # ─── NAVIGASI ────────────────────────────────────────────────────────────────
 
