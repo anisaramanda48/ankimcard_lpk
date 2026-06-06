@@ -437,7 +437,7 @@ if st.session_state.mode == "home":
             <span class="hero-icon-side">⚖️</span>
         </div>
         <div class="hero-title">Ankim-Card &amp; Calc</div>
-        <div class="hero-subtitle">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
+        <div class="hero-subtitle">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia Analitik</div>
         <div style="margin-top:1.2rem;color:rgba(255,255,255,0.9);font-size:1rem;position:relative;z-index:1">
             Selamat Datang! 👋<br>
             <span style="font-size:0.85rem;opacity:0.8">Pilih menu di bawah untuk mulai menggunakan Ankim-Card &amp; Calc.</span>
