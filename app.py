@@ -1,4 +1,3 @@
-FILE PYTHON SEBELUM DI UBAH KONSENTRASINYA DAN JUDULNYA DLL
 import streamlit as st
 import json
 import random
