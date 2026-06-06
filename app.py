@@ -448,6 +448,10 @@ if st.session_state.mode == "home":
             <span class="hero-badge">🧮 Kalkulator Rumus</span>
             <span class="hero-badge">📖 Materi Praktikum</span>
         </div>
+        <div style="margin-top:1.2rem;color:rgba(255,255,255,0.9);font-size:1rem;position:relative;z-index:1">
+            Selamat Datang! 👋<br>
+            <span style="font-size:0.85rem;opacity:0.8">Pilih menu di bawah untuk mulai menggunakan Ankim-Card &amp; Calc.</span>
+        </div>
     </div>
     """, unsafe_allow_html=True)
 else:
@@ -457,6 +461,7 @@ else:
         <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
     </div>
     """, unsafe_allow_html=True)
+    st.markdown("<hr class='styled-hr'>", unsafe_allow_html=True)
 
 # ─── NAVIGASI ────────────────────────────────────────────────────────────────
 
@@ -480,15 +485,12 @@ with col_t:
         st.session_state.mode = "tentang"
         st.rerun()
 
-st.markdown("<hr class='styled-hr'>", unsafe_allow_html=True)
-
 # ═══════════════════════════════════════════════════════════════════════════════
 # HOME MODE
 # ═══════════════════════════════════════════════════════════════════════════════
 
 if st.session_state.mode == "home":
-    st.markdown('<div class="section-title">Selamat Datang! 👋</div>', unsafe_allow_html=True)
-    st.markdown('<div class="section-sub">Pilih menu di atas untuk mulai menggunakan Ankim-Card & Calc.</div>', unsafe_allow_html=True)
+    pass
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # FLASHCARD MODE
