@@ -38,34 +38,31 @@ html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:var(--cr
 h1,h2,h3{font-family:'Playfair Display',serif;color:var(--green);}
 
 /* HERO */
-.hero-container{text-align:center;padding:2.5rem 1.5rem 2rem;
+.hero-container{text-align:center;padding:1.5rem 1rem 1.5rem;
   background:linear-gradient(135deg,#1a3d2b 0%,#2D5A3D 55%,#3D7A52 100%);
-  border-radius:24px;margin-bottom:1.8rem;box-shadow:0 12px 40px rgba(45,90,61,0.30);
+  border-radius:20px;margin-bottom:1.5rem;box-shadow:0 12px 40px rgba(45,90,61,0.30);
   position:relative;overflow:hidden;}
 .hero-container::before{content:'';position:absolute;top:-40px;right:-40px;
   width:200px;height:200px;background:rgba(255,255,255,0.04);border-radius:50%;}
 .hero-container::after{content:'';position:absolute;bottom:-60px;left:-30px;
   width:250px;height:250px;background:rgba(255,255,255,0.03);border-radius:50%;}
-.hero-icons{display:flex;justify-content:center;align-items:center;gap:1.2rem;
-  margin-bottom:1rem;position:relative;z-index:1;}
-.hero-icon-main{font-size:3.8rem;animation:float 3s ease-in-out infinite;
+.hero-icons{display:flex;justify-content:center;align-items:center;gap:0.8rem;
+  margin-bottom:0.6rem;position:relative;z-index:1;}
+.hero-icon-main{font-size:2.6rem;animation:float 3s ease-in-out infinite;
   filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));}
-.hero-icon-side{font-size:2.2rem;opacity:0.75;animation:float 3s ease-in-out infinite;}
+.hero-icon-side{font-size:1.6rem;opacity:0.75;animation:float 3s ease-in-out infinite;}
 .hero-icon-side:first-child{animation-delay:-1s;}
 .hero-icon-side:last-child{animation-delay:-2s;}
 @keyframes float{0%,100%{transform:translateY(0px);}50%{transform:translateY(-8px);}}
-.hero-title{font-size:2.8rem;font-weight:800;font-family:'Playfair Display',serif;
+.hero-title{font-size:clamp(1.4rem,5vw,2.4rem);font-weight:800;font-family:'Playfair Display',serif;
   background:linear-gradient(90deg,#a8e6c0,#ffffff,#a8e6c0);background-size:200% auto;
   -webkit-background-clip:text;-webkit-text-fill-color:transparent;
   animation:shine 4s linear infinite;margin:0.2rem 0;position:relative;z-index:1;}
 @keyframes shine{to{background-position:200% center;}}
-.hero-subtitle{font-size:0.92rem;color:rgba(255,255,255,0.72);margin-top:0.5rem;
+.hero-subtitle{font-size:clamp(0.72rem,2.5vw,0.88rem);color:rgba(255,255,255,0.72);margin-top:0.4rem;
   font-style:italic;position:relative;z-index:1;}
-.hero-badges{display:flex;justify-content:center;gap:0.7rem;margin-top:1.4rem;
-  flex-wrap:wrap;position:relative;z-index:1;}
-.hero-badge{background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.22);
-  border-radius:50px;padding:0.35rem 1rem;color:rgba(255,255,255,0.88);font-size:0.80rem;
-  font-weight:600;backdrop-filter:blur(4px);}
+.hero-welcome{margin-top:0.9rem;position:relative;z-index:1;
+  color:rgba(255,255,255,0.90);font-size:clamp(0.78rem,2.5vw,0.92rem);line-height:1.6;}
 
 /* COMPACT HEADER */
 .site-header-compact{text-align:center;padding:1rem 1rem 0.8rem;
@@ -218,11 +215,7 @@ if st.session_state.mode=="home":
         </div>
         <div class="hero-title">Ankim-Card &amp; Calc</div>
         <div class="hero-subtitle">Asisten Pintar Hafalan Reaksi &amp; Perhitungan Larutan Kimia</div>
-        <div class="hero-badges">
-            <span class="hero-badge">🧪 Flashcard Interaktif</span>
-            <span class="hero-badge">🧮 Kalkulator Rumus</span>
-            <span class="hero-badge">📖 Materi Praktikum</span>
-        </div>
+        <div class="hero-welcome">Selamat Datang! 👋<br>Pilih menu di bawah untuk mulai menggunakan Ankim-Card &amp; Calc.</div>
     </div>""", unsafe_allow_html=True)
 else:
     st.markdown("""
@@ -251,11 +244,7 @@ st.markdown("<hr class='styled-hr'>",unsafe_allow_html=True)
 # HOME
 # ══════════════════════════════════════════════
 if st.session_state.mode=="home":
-    st.markdown("""
-    <div style='text-align:center;padding:1rem 0'>
-        <div style='font-family:Playfair Display,serif;font-size:1.4rem;color:var(--green);margin-bottom:0.5rem'>Selamat Datang! 👋</div>
-        <div style='font-size:0.9rem;color:var(--text2)'>Pilih menu di atas untuk mulai menggunakan Ankim-Card & Calc.</div>
-    </div>""", unsafe_allow_html=True)
+    pass  # welcome text sudah ada di dalam hero
 
 # ══════════════════════════════════════════════
 # FLASHCARD — langsung pilih kategori
