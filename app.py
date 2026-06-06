@@ -445,34 +445,40 @@ if st.session_state.mode == "home":
     </div>
     """, unsafe_allow_html=True)
 else:
-    # COMPACT HEADER — halaman selain home
-    st.markdown("""
-    <div class="site-header-compact">
-        <div class="logo">Ankim<span>-Card</span> &amp; Calc</div>
-    </div>
-    """, unsafe_allow_html=True)
+    pass  # halaman non-home langsung ke konten
 
 # ─── NAVIGASI ────────────────────────────────────────────────────────────────
 
-col_f, col_k, col_m, col_t = st.columns(4)
-with col_f:
-    if st.button("🃏 Flashcard", key="nav_flash", use_container_width=True):
-        st.session_state.mode = "flashcard"
+if st.session_state.mode == "home":
+    # Tampilkan 4 tombol menu hanya di halaman home
+    col_f, col_k, col_m, col_t = st.columns(4)
+    with col_f:
+        if st.button("🃏 Flashcard", key="nav_flash", use_container_width=True):
+            st.session_state.mode = "flashcard"
+            st.session_state.view = "menu"
+            st.rerun()
+    with col_k:
+        if st.button("🧮 Kalkulator", key="nav_calc", use_container_width=True):
+            st.session_state.mode = "kalkulator"
+            st.rerun()
+    with col_m:
+        if st.button("📖 Materi", key="nav_materi", use_container_width=True):
+            st.session_state.mode = "materi"
+            st.session_state.materi_view = "menu"
+            st.rerun()
+    with col_t:
+        if st.button("👥 Tentang Kami", key="nav_about", use_container_width=True):
+            st.session_state.mode = "tentang"
+            st.rerun()
+else:
+    # Tombol balik ke menu utama di halaman selain home
+    st.markdown('<div class="btn-back">', unsafe_allow_html=True)
+    if st.button("🏠 Menu Utama", key="nav_home_back", use_container_width=False):
+        st.session_state.mode = "home"
         st.session_state.view = "menu"
-        st.rerun()
-with col_k:
-    if st.button("🧮 Kalkulator", key="nav_calc", use_container_width=True):
-        st.session_state.mode = "kalkulator"
-        st.rerun()
-with col_m:
-    if st.button("📖 Materi", key="nav_materi", use_container_width=True):
-        st.session_state.mode = "materi"
         st.session_state.materi_view = "menu"
         st.rerun()
-with col_t:
-    if st.button("👥 Tentang Kami", key="nav_about", use_container_width=True):
-        st.session_state.mode = "tentang"
-        st.rerun()
+    st.markdown('</div>', unsafe_allow_html=True)
 
 # ═══════════════════════════════════════════════════════════════════════════════
 # HOME MODE
