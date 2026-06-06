@@ -4,7 +4,7 @@
       "id": "anjen",
       "judul": "Analisis Jenis",
       "icon": "🧪",
-      "deskripsi": "Pemisahan dan identifikasi kation dalam golongan I–V menggunakan pereaksi selektif dan spesifik.",
+      "deskripsi": "Pemisahan dan identifikasi kation dalam golongan I–IV menggunakan pereaksi selektif dan spesifik.",
       "tujuan": "Memisahkan kation berdasarkan golongannya menggunakan pereaksi selektif dan mengidentifikasi kation yang telah terpisah menggunakan pereaksi yang spesifik.",
       "prinsip": "Memisahkan kation dengan pereaksi selektif untuk memisahkan dari satu golongan dengan golongan lainnya. Kation yang telah terpisah ke dalam golongannya kemudian diidentifikasi menggunakan pereaksi spesifik untuk mengetahui jenis kation yang terdapat dalam masing-masing golongan.",
       "punya_rumus": false,
@@ -24,7 +24,7 @@
           "golongan": "I",
           "reaksi": [
             {"pereaksi": "HCl(aq)", "persamaan": "Pb²⁺(aq) + 2HCl(aq) → PbCl₂(s)↓ + 2H⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
-            {"pereaksi": "H₂O dipanaskan", "persamaan": "PbCl₂(s) + H₂O(l) dipanaskan → Pb²⁺(aq) + 2Cl⁻(aq) + H₂O(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
+            {"pereaksi": "H₂O dipanaskan", "persamaan": "PbCl₂(s) + H₂O(l) dipanaskan → Pb²⁺(aq) + 2Cl⁻(aq) + H₂O(l)", "pengamatan": "larutan tidak berwarna"},
             {"pereaksi": "K₂CrO₄(aq)", "persamaan": "Pb²⁺(aq) + K₂CrO₄(aq) → PbCrO₄(s)↓ + 2K⁺(aq)", "pengamatan": "↓ kuning, larutan kuning"}
           ]
         },
@@ -33,7 +33,7 @@
           "golongan": "I",
           "reaksi": [
             {"pereaksi": "HCl(aq)", "persamaan": "Hg₂²⁺(aq) + HCl(aq) → Hg₂Cl₂(s)↓ + 2H⁺(aq)", "pengamatan": "↓ putih, larutan tidak berwarna"},
-            {"pereaksi": "H₂O dipanaskan", "persamaan": "Hg₂Cl₂(s) + H₂O(l) dipanaskan → tidak bereaksi", "pengamatan": "↓ putih, larutan keruh"},
+            {"pereaksi": "H₂O dipanaskan", "persamaan": "Hg₂Cl₂(s) + H₂O(l) dipanaskan → tidak bereaksi", "pengamatan": "↓ putih, larutan tidak berwarna"},
             {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Hg₂Cl₂(s) + NH₄OH(aq) → Hg(NH₂)Cl(s)↓putih + Hg(s)↓hitam + NH₄Cl(aq) + H₂O(l)", "pengamatan": "↓ hitam dan putih, larutan tidak berwarna"}
           ]
         },
@@ -51,7 +51,7 @@
           "ion": "Fe³⁺",
           "golongan": "III",
           "reaksi": [
-            {"pereaksi": "HCl(aq)", "persamaan": "Fe³⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Kuning kecoklatan (orange)"},
+            {"pereaksi": "HCl(aq)", "persamaan": "Fe³⁺(aq) + HCl(aq) → tidak bereaksi", "pengamatan": "Larutan tidak berwarna"},
             {"pereaksi": "NH₄OH(aq) berlebih", "persamaan": "Fe³⁺(aq) + 3NH₄OH(aq) → Fe(OH)₃(s)↓ + 3NH₄⁺(aq)", "pengamatan": "↓ merah kecoklatan, larutan tidak berwarna"},
             {"pereaksi": "NaOH(aq)", "persamaan": "Fe(OH)₃(s) + NaOH(aq) → Fe(OH)₃(s)↓", "pengamatan": "↓ merah kecoklatan, larutan tidak berwarna"},
             {"pereaksi": "HNO₃(aq)", "persamaan": "Fe(OH)₃(s) + 3HNO₃(aq) → Fe³⁺(aq) + 3NO₃⁻(aq) + 3H₂O(l)", "pengamatan": "Larutan tidak berwarna"},
@@ -166,7 +166,7 @@
           "prinsip": "Larutan HCl merupakan larutan standar/baku sekunder yang dibakukan dengan larutan boraks dengan indikator SM (Sindur Metil/Merah Metil).",
           "reaksi": "Na₂B₄O₇·10H₂O(s) + 2HCl(aq) → 2NaCl(aq) + 4H₃BO₃(aq) + 5H₂O(l)",
           "rumus": "N HCl = mg boraks / (Fp × V HCl (mL) × BE boraks)",
-          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE boraks = BM/2 = 190,6 mg/mgrek | V HCl = volume titran HCl (mL)"
+          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE boraks = BM/2 = 190,7 mg/mgrek | V HCl = volume titran HCl (mL)"
         },
         {
           "id": "titri3",
@@ -183,8 +183,8 @@
           "tujuan": null,
           "prinsip": "Natrium tiosulfat distandardisasi dengan bahan baku primer K₂Cr₂O₇. Reaksi K₂Cr₂O₇ dengan KI berlebih dalam suasana asam akan menghasilkan iod. Iod yang dibebaskan dititrasi dengan larutan tiosulfat, mendekati titik akhir ditambahkan indikator kanji hingga warna berubah dari biru tua menjadi hijau muda.",
           "reaksi": "K₂Cr₂O₇(aq) + 6KI(aq) + 14HCl(aq) → 8KCl(aq) + 2CrCl₃(aq) + 7H₂O(l) + 3I₂(aq)\n2Na₂S₂O₃(aq) + I₂(aq) → Na₂S₄O₆(aq) + 2NaI(aq)",
-          "rumus": "N Na₂S₂O₃ = mg K₂Cr₂O₇ / (Fp × V tio (mL) × BE K₂Cr₂O₇)",
-          "keterangan_rumus": "Fp = faktor pengali (100/25) | BE K₂Cr₂O₇ = BM/6 = 49 mg/mgrek | V tio = volume titran tiosulfat (mL)"
+          "rumus": "N Na₂S₂O₃ = mg K₂Cr₂O₇ / (V tio (mL) × BE K₂Cr₂O₇)",
+          "keterangan_rumus": "BE K₂Cr₂O₇ = BM/6 = 49 mg/mgrek | V tio = volume titran tiosulfat (mL)"
         },
         {
           "id": "titri5",
