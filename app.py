@@ -650,7 +650,7 @@ elif st.session_state.mode == "kalkulator":
     # ── Pengenceran ──────────────────────────────────────────────────────────
     with st.expander("🧪 Pengenceran Larutan (C₁V₁ = C₂V₂)", expanded=True):
         st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ </div>', unsafe_allow_html=True)
-       cari=st.radio("Yang ingin dicari:",
+       cari=st.radio("Yang ingin dicari:"),
             ["Cari V₁ (volume yang diambil)","Cari C₂ (konsentrasi akhir)"],
             key="pengenceran_cari")
 
