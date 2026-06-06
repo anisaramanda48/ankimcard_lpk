@@ -649,22 +649,23 @@ elif st.session_state.mode == "kalkulator":
 
     # ── Pengenceran ──────────────────────────────────────────────────────────
     with st.expander("🧪 Pengenceran Larutan (C₁V₁ = C₂V₂)", expanded=True):
-        st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ &nbsp;→&nbsp; V₁ = (C₂ × V₂) / C₁</div>', unsafe_allow_html=True)
-        unit = st.selectbox("Satuan konsentrasi", ["M (Molar)", "N (Normal)", "% (Persen)"], key="dil_unit")
-        col1, col2 = st.columns(2)
-        with col1:
-            c1_val = st.number_input("C₁ – Konsentrasi Awal", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="dil_c1")
-        with col2:
-            c2_val = st.number_input("C₂ – Konsentrasi Akhir", min_value=0.0, value=0.0, step=0.0001, format="%.4f", key="dil_c2")
-        v2_val = st.number_input("V₂ – Volume Akhir (mL)", min_value=0.0, value=0.0, step=0.01, format="%.2f", key="dil_v2")
-        if st.button("Hitung V₁", key="calc_dil"):
-            if c1_val > 0 and c2_val > 0 and v2_val > 0:
-                v1_val = (c2_val * v2_val) / c1_val
-                st.markdown(f'<div class="result-output"><small>📢 Volume yang diambil (V₁)</small>{v1_val:.4f} mL</div>', unsafe_allow_html=True)
-                if v1_val > v2_val:
-                    st.warning("⚠️ V₁ > V₂ — periksa kembali nilai yang dimasukkan.")
-            else:
-                st.error("Isi semua kolom dengan nilai lebih dari 0.")
+        st.markdown('<div class="calc-formula">Rumus: C₁ × V₁ = C₂ × V₂ </div>', unsafe_allow_html=True)
+       cari=st.radio("Yang ingin dicari:",
+            ["Cari V₁ (volume yang diambil)","Cari C₂ (konsentrasi akhir)"],
+            key="pengenceran_cari")
+
+        if cari=="Cari V₁ (volume yang diambil)":
+            st.markdown("**Masukkan nilai C₁, C₂, dan V₂:**")
+            col1,col2,col3=st.columns(3)
+            with col1: c1v=st.number_input("C₁ – Konsentrasi Awal",min_value=0.0,value=0.0,step=0.0001,format="%.4f",key="v1_c1")
+            with col2: c2v=st.number_input("C₂ – Konsentrasi Akhir",min_value=0.0,value=0.0,step=0.0001,format="%.4f",key="v1_c2")
+            with col3: v2v=st.number_input("V₂ – Volume Akhir (mL)",min_value=0.0,value=0.0,step=0.01,format="%.2f",key="v1_v2")
+            if st.button("Hitung V₁",key="calc_v1"):
+                if c1v>0 and c2v>0 and v2v>0:
+                    hasil=(c2v*v2v)/c1v
+                    st.markdown(f'<div class="result-output"><small>📢 Volume yang diambil (V₁)</small>{hasil:.4f} mL</div>',unsafe_allow_html=True)
+                    if hasil>v2v: st.warning("⚠️ V₁ > V₂ — periksa kembali nilai yang dimasukkan.")
+                else: st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
     # ── Molaritas ─────────────────────────────────────────────────────────────
     with st.expander("⚖️ Molaritas (M)", expanded=False):
