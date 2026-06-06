@@ -66,14 +66,14 @@
         },
         {
           "id": 4,
-          "front": "Apa yang terjadi pada warna endapan AgCl jika terkena paparan cahaya matahari langsung?",
-          "back": "Berubah menjadi keabu-abuan atau kehitaman karena sebagian AgCl terurai/tereduksi menjadi logam perak (Ag)"
+          "front": "Apa fungsi HNO₃ pada penetapan kadar Fe ?",
+          "back": "Sebagai oksidator yang mengubah Fe²⁺ menjadi Fe³⁺"
        
         },
         {
           "id": 5,
-          "front": "Bagaimana sifat fisik dan warna endapan Perak Klorida (AgCl) yang terbentuk dalam suasana asam?",
-          "back": "Endapan PUTIH BERGUMPAL"
+          "front": "Mengapa endapan hasil homogeneous precipitation lebih baik?",
+          "back": "Karena endapan lebih kasar, lebih mudah disaring, dan mengandung lebih sedikit pengotor"
       
         },
         {
@@ -97,7 +97,7 @@
         {
           "id": 1,
           "front": "Perubahan warna TAT pada standardisasi NaOH dengan asam oksalat (Indikator PP) adalah...",
-          "back": "Dari TIDAK BERWARNA (jernih) → MERAH MUDA SEULAS (bertahan minimal 15 detik)"
+          "back": "Dari TIDAK BERWARNA (jernih) → MERAH MUDA SEULAS"
         },
         {
           "id": 2,
@@ -122,17 +122,17 @@
         {
           "id": 6,
           "front": "Mengapa titrasi Permanganometri tidak membutuhkan indikator warna tambahan?",
-          "back": "Karena KMnO₄ bertindak sebagai AUTO-INDIKATOR (warnanya sendiri menandakan titik akhir)"
+          "back": "Karena KMnO₄ bertindak sebagai AUTO-INDIKATOR"
         },
         {
           "id": 7,
           "front": "Warna Titik Akhir Titrasi (TAT) yang konstan pada titrasi Permanganometri adalah...",
-          "back": "MERAH MUDA SANGAT TIPIS (merah jambu pucat) yang tidak hilang saat dikocok"
+          "back": "MERAH MUDA"
         },
         {
           "id": 8,
           "front": "Pada titrasi Iodometri, kapan amilum ditambahkan dan pada warna larutan seperti apa?",
-          "back": "Amilum ditambahkan saat larutan berwarna KUNING JERAMI / KUNING PUCAT (dari cokelat tua)"
+          "back": "Amilum ditambahkan saat larutan berwarna KUNING PUCAT (dari cokelat tua)"
         },
         {
           "id": 9,
@@ -142,12 +142,12 @@
         {
           "id": 10,
           "front": "Pada Argentometri Metode Mohr (penetapan kadar klorida), perubahan warna visual TAT adalah...",
-          "back": "Terbentuk ENDAPAN MERAH BATA samar dari Ag₂CrO₄ di antara endapan putih AgCl"
+          "back": "Terbentuk ENDAPAN MERAH BATA"
         },
         {
           "id": 11,
           "front": "Perubahan warna TAT pada penentuan kesadahan air (Ca²⁺ dan Mg²⁺) menggunakan indikator EBT adalah...",
-          "back": "Dari MERAH ANGGUR → BIRU MURNI / BIRU LAUT (bebas dari warna kemerahan)"
+          "back": "Dari MERAH ANGGUR → BIRU"
         }
       ]
     }
