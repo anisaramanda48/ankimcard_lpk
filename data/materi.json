@@ -121,7 +121,7 @@
           "tujuan": "Penetapan sulfat dilakukan dengan pengendapan sebagai barium sulfat. Kadar sulfat dinyatakan dalam bentuk satuan persen (%).",
           "prinsip": "Pada larutan sulfat yang diasamkan sedikit dengan asam klorida lalu ditambahkan larutan barium klorida yang encer sampai barium sulfat diendapkan dengan sempurna. Asam yang ditambahkan supaya hanya sulfat yang mengendap. Dalam lingkungan netral, fosfat, karbonat, atau kromat dari barium juga tidak dapat larut.",
           "reaksi": "Na₂SO₄(aq) + BaCl₂(aq) → BaSO₄(s)↓ + 2NaCl(aq)",
-          "rumus": "Kadar SO₄²⁻ (%) = (Mr SO₄²⁻ / Mr BaSO₄) × (W₂ – W₀) / (W₁ – W₀) × 100%",
+          "rumus": "Kadar SO₄²⁻ (%) = (Mr SO₄²⁻ / Mr BaSO₄) × [(W₂ – W₀) / (W₁ – W₀)] × 100%",
           "keterangan_rumus": "Mr SO₄²⁻ = 96 g/mol | Mr BaSO₄ = 233 g/mol | W₀ = cawan kosong (g) | W₁ = cawan + sampel sebelum dipanaskan (g) | W₂ = cawan + abu setelah dipanaskan (g)"
         },
         {
@@ -130,7 +130,7 @@
           "tujuan": "Menentukan kadar besi (Fe) dalam suatu sampel garam besi (II) secara kuantitatif dan menerapkan prinsip gravimetri dalam menghitung persentase (%) kadar besi berdasarkan berat tetap endapan Fe₂O₃ yang diperoleh.",
           "prinsip": "Besi (II) dalam larutan dioksidasikan dengan HNO₃ pekat sehingga menjadi besi (III), kemudian diendapkan sebagai besi (III) hidroksida dengan penambahan ammonia. Endapan dicuci, dipijarkan lalu ditimbang sebagai besi (III) oksida.",
           "reaksi": "3Fe²⁺(aq) + NO₃⁻(aq) + 4H⁺(aq) → 3Fe³⁺(aq) + NO(g) + 2H₂O(l)\nFe³⁺(aq) + 3NH₄OH(aq) → Fe(OH)₃(s)↓ + 3NH₄⁺(aq)\n2Fe(OH)₃(s) → (dipanaskan) → Fe₂O₃(s) + 3H₂O(g)",
-          "rumus": "Kadar Fe (%) = (2 × Ar Fe / Mr Fe₂O₃) × (W₂ – W₀) / (W₁ – W₀) × 100%",
+          "rumus": "Kadar Fe (%) = (2 × Ar Fe / Mr Fe₂O₃) × [(W₂ – W₀) / (W₁ – W₀)] × 100%",
           "keterangan_rumus": "Ar Fe = 56 g/mol | Mr Fe₂O₃ = 160 g/mol | W₀ = cawan kosong (g) | W₁ = cawan + sampel sebelum dipanaskan (g) | W₂ = cawan + abu setelah dipanaskan (g)"
         },
         {
@@ -139,7 +139,7 @@
           "tujuan": "Menentukan jumlah atau persentase kandungan barium (Ba) secara kuantitatif dalam suatu sampel menggunakan metode gravimetri homogeneous-precipitation.",
           "prinsip": "Larutan kromat ditambahkan ke dalam larutan garam barium yang cukup asam untuk mencegah terbentuknya endapan, kemudian ditambahkan urea dan larutan dipanaskan sampai mendidih. Terbentuknya ammonium hidroksida hasil hidrolisis urea secara perlahan akan menaikkan pH larutan. Jika sudah mencapai harga pH tertentu, pengendapan barium kromat dimulai. Endapan yang terbentuk lebih kasar dan lebih murni dibandingkan dengan pengendapan secara langsung.",
           "reaksi": "2CrO₄²⁻(aq) + 2H⁺(aq) ⇌ Cr₂O₇²⁻(aq) + H₂O(l)\n(NH₂)₂CO(aq) + H₂O(l) → 2NH₃(aq) + CO₂(g)\nCr₂O₇²⁻(aq) + 2OH⁻(aq) → 2CrO₄²⁻(aq) + H₂O(l)\nBa²⁺(aq) + CrO₄²⁻(aq) → BaCrO₄(s)↓",
-          "rumus": "Kadar Ba (%) = (Ar Ba / Mr BaCrO₄) × (W₁ – W₀) / V_sampel × 100%",
+          "rumus": "Kadar Ba (%) = (Ar Ba / Mr BaCrO₄) × [(W₁ – W₀) / V sampel] × 100%",
           "keterangan_rumus": "Ar Ba = 137 g/mol | Mr BaCrO₄ = 253 g/mol | W₀ = kertas saring + wadah kosong (g) | W₁ = kertas saring + endapan + wadah setelah dipanaskan (g) | V_sampel = volume sampel (mL)"
         }
       ]
