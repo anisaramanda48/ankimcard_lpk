@@ -633,8 +633,7 @@ elif st.session_state.mode == "flashcard":
                     start_session(st.session_state.category_id, shuffle=True, review_cards=wrong)
                     st.rerun()
         with c3:
-            if st.button("🏠 Menu Utama", use_container_width=True):
-                st.session_state.mode = "home"
+            if st.button("📂 Pilih Kategori", use_container_width=True):
                 st.session_state.view = "menu"
                 st.rerun()
 
