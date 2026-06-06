@@ -660,7 +660,7 @@ elif st.session_state.mode=="kalkulator":
             if st.button("Hitung V₁",key="calc_v1"):
                 if c1v>0 and c2v>0 and v2v>0:
                     hasil=(c2v*v2v)/c1v
-                    st.markdown(f'<div class="result-output"><small>📢 Volume yang diambil (V₁)</small>{hasil:.4f} mL</div>',unsafe_allow_html=True)
+                    st.markdown(f'<div class="result-output"><small>📢 Volume yang diambil (V₁)</small>{hasil:.2f} mL</div>',unsafe_allow_html=True)
                     if hasil>v2v: st.warning("⚠️ V₁ > V₂ — periksa kembali nilai yang dimasukkan.")
                 else: st.error("Isi semua kolom dengan nilai lebih dari 0.")
 
