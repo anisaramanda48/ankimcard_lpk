@@ -38,7 +38,7 @@ html,body,[class*="css"]{font-family:'Lato',sans-serif;background-color:var(--cr
 h1,h2,h3{font-family:'Playfair Display',serif;color:var(--green);}
 
 /* HERO */
-.hero-container{text-align:center;padding:1.5rem 1rem 1.5rem;
+.hero-container{text-align:center;padding:1.5rem 1rem;
   background:linear-gradient(135deg,#1a3d2b 0%,#2D5A3D 55%,#3D7A52 100%);
   border-radius:20px;margin-bottom:1.5rem;box-shadow:0 12px 40px rgba(45,90,61,0.30);
   position:relative;overflow:hidden;}
@@ -48,9 +48,9 @@ h1,h2,h3{font-family:'Playfair Display',serif;color:var(--green);}
   width:250px;height:250px;background:rgba(255,255,255,0.03);border-radius:50%;}
 .hero-icons{display:flex;justify-content:center;align-items:center;gap:0.8rem;
   margin-bottom:0.6rem;position:relative;z-index:1;}
-.hero-icon-main{font-size:2.6rem;animation:float 3s ease-in-out infinite;
+.hero-icon-main{font-size:clamp(1.8rem, 5vw, 2.6rem);animation:float 3s ease-in-out infinite;
   filter:drop-shadow(0 4px 8px rgba(0,0,0,0.3));}
-.hero-icon-side{font-size:1.6rem;opacity:0.75;animation:float 3s ease-in-out infinite;}
+.hero-icon-side{font-size:clamp(1.2rem, 3vw, 1.6rem);opacity:0.75;animation:float 3s ease-in-out infinite;}
 .hero-icon-side:first-child{animation-delay:-1s;}
 .hero-icon-side:last-child{animation-delay:-2s;}
 @keyframes float{0%,100%{transform:translateY(0px);}50%{transform:translateY(-8px);}}
